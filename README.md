@@ -31,7 +31,7 @@ AFFORDABLE and OPEN SOURCE: All aspects of the PUMA are open source and not mono
 
 DIY: Great care has been taken in the design to ensure the whole scope with all its advanced options can be built by anyone with standard tools and only moderate DIY skills. There is no need to print/etch/drill custom circuit boards and only standard fixings are used - screws and washers that can be purchased cheaply almost anywhere. Even the most advanced optional electronic components can be made with just basic soldering skills and tripad prototypintg board. A single Arduino Nano is used as the basis for on-board computing.
 
-RMS STANDARD: The scope accepts RMS standard objectives so you can use very high quality optics such as objectives from the Olympus BH series or old Zeiss / Leitz objectives that can be purchased second had on eBay or can be found spare in many labs now that most microscopes have gone over to infinity optics.
+RMS STANDARD: The scope accepts RMS standard objectives so you can use very high quality optics such as objectives from the Olympus BH series or old Zeiss / Leitz objectives that can be purchased second hand on eBay or can be found spare in many labs now that most microscopes have gone over to infinity optics.
 
 INFINITY OPTICS: With the additions of an inexpensive tube lens more modern infinity objectives may also be used - although the image quality will not be so good due to the proprietary nature of the corrections used in such objectives. This option is therefore provided - but not recommended.
 
