@@ -7,7 +7,7 @@ Intro:
 ------
 As a professional medical Pathologist I have had the privilege of usng high quality optical microscopes routinely. I know what a great optical image they provide, how comfortable they are to look down and also how horrendously EXPENSIVE they are to buy and maintain putting them beyond reach of most people. I designed the PUMA scope to make such a high quality optical viewing microscopy experience available to people without such generous funding resources.
 
-Most 3D printed open source microscopes I have seen appear to be either toys or designed to be used as camera scopes with a web-cam / PiCam or smartphone. They also seem to be novel re-inventions of the microscope that would seem unfamiliar to peope used to a traditional scope - that doesn't mean they are not useful in their own way of course.
+Most 3D printed open source microscopes I have seen appear to be either toys or designed to be used as camera scopes with a web-cam / PiCam or smartphone. They also seem to be novel re-inventions of the microscope that would seem unfamiliar to people used to a traditional scope - that doesn't mean they are not useful in their own way of course.
 
 PUMA is an open source 3D printed traditional-style direct vision microscope designed as a professional benchtop microscope of standard, familar design but made with inexpensive materials and 3D printing - and made truly portable for field work. Here are its main features:
 
