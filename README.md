@@ -4,6 +4,7 @@ PUMA MICROSCOPE: [P]ortable, [U]pgradeable, [M]odular, [A]ffordable
 This project is released under the following licenses:
 
  For source code (including CAD files, STL files and computer programs) and compiled code: the GNU GENERAL PUBLIC LICENSE Version 3
+ 
  For documentation: the GNU Free Documentation License, Version 1.3
                        
 Intro:
