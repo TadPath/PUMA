@@ -1,5 +1,5 @@
-PUMA MICROSCOPE: [P]ortable, [U]pgradeable, [M]odular, [A]ffordable
-===================================================================
+PUMA 3D PRINTED MULTIMODALITY MICROSCOPE 
+========================================
 
 This project is released under the following licenses:
 
@@ -9,11 +9,13 @@ This project is released under the following licenses:
                        
 Intro:
 ------
+PUMA is an Open Source (GPL v3.0) 3D printed light microscope system designed for direct eye observations and ultra-portability with advanced options for digital imaging, measurements and computer control. The name PUMA is an acronym of some of its most important distinguishing features: [P]ortable, [U]pgradeable, [M]odular, [A]ffordable
+
 As a professional medical Pathologist I have had the privilege of usng high quality optical microscopes routinely. I know what a great optical image they provide, how comfortable they are to look down and also how horrendously EXPENSIVE they are to buy and maintain putting them beyond reach of most people. I designed the PUMA scope to make such a high quality optical viewing microscopy experience available to people without such generous funding resources.
 
 Most 3D printed open source microscopes I have seen appear to be either toys or designed to be used as camera scopes with a web-cam / PiCam or smartphone. They also seem to be novel re-inventions of the microscope that would seem unfamiliar to people used to a traditional scope - that doesn't mean they are not useful in their own way of course.
 
-PUMA is an open source 3D printed traditional-style direct vision microscope designed as a professional benchtop microscope of standard, familar design but made with inexpensive materials and 3D printing - and made truly portable for field work. Here are its main features:
+PUMA is an open source 3D printed traditional-style direct vision microscope designed as a professional benchtop microscope of familar design but made with inexpensive materials and 3D printing - and made truly portable for field work. Here are its main features:
 
 * It can use professional quality standard microscope optics
 * It is truly portable (no mains, smartphone, PC or monitor required).
