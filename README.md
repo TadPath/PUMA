@@ -73,7 +73,9 @@ EDUCATIONAL VALUE: Being open source and 3D printed, together with its standard 
 
 STURDY Z-STAGE: The PUMA Z-stage is based on the thread and timing belt mechanism used by 3D printers themselves. This allows it to move the whole above-stage heavy optical assembly very precisely (something that flexure-based 3D printed stages are not currently capable of).
 
-STANDARD XY STAGE: The PUMA specimen stage is of a familiar design using standard stage clips or an standard XY mechanical caliper to hold and manipulate a standard microscope slide over its full range of motion (more than 50 x 25 mm). This allows a standard microscope slide to be screened across it whole viewable area as professional biological microscopists will be used to. PUMA makes no attempt to re-invent the microscope stage using 3D printing.
+STANDARD XY STAGE: The PUMA specimen stage is of a familiar design using standard stage clips or an standard XY mechanical caliper to hold and manipulate a standard microscope slide over its full range of motion (more than 50 x 25 mm). This allows a standard microscope slide to be screened across it whole viewable area as professional biological microscopists will be used to. PUMA makes no attempt to re-invent the microscope stage using 3D printing. There are also additional fixin holes on the stage for possible future upgrades such as a live cell imaging chambre attachment.
+
+ADJUSTABLE LEGS: The legs/stand system can be configured for a 35 degree slant of the scope (as shown in the figures above) for a more ergonical viewing angle of fixed angle ocular tubes or, with a simple hind leg extension, it may be configured to keep the stage level (for imaging live cells in fluid, for example).
 
 
 Limitations
