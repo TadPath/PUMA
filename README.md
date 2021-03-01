@@ -1,6 +1,8 @@
 PUMA 3D PRINTED MULTIMODALITY MICROSCOPE 
 ========================================
 
+![PUMA Example Scopes](https://github.com/TadPath/PUMA/Images/ReadMe_Sm_Scopes.png?raw=true)
+
 This project is released under the following licenses:
 
  For source code (including CAD files, STL files and computer programs) and compiled code: the GNU GENERAL PUBLIC LICENSE Version 3
