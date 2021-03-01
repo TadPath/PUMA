@@ -42,9 +42,9 @@ Procedure
 ---------
 * Solder / connect the phono plug to one end of the power cable and strip the opposite bare ends by 2 mm or so and tin them.
 
-![PUMA LED Tripad Connections](Images/PUMA_LED_Tripad_Connections.png)
+* Cut a rectangular piece of tripad board consisting in 3 tripads down by 8 strips across (see picture below). The final size will be about 20 x 22.5 mm. File or sand down the edges so that the board will fit well into the recess in the 3D ptinted LED cover without being overly tight (part: DI_LED_Cover.stl).
 
-* Cut a rectangular piece of tripad board consisting in 3 tripads down by 8 strips across. The final size will be about 20 x 22.5 mm. File or sand down the edges so that the board will fit well into the recess in the 3D ptinted LED cover without being overly tight (part: DI_LED_Cover.stl).
+![PUMA LED Tripad Connections](Images/PUMA_LED_Tripad_Connections.png)
 
 * On the copper side of the board tin the tripads in the middle row which are 1 strip in from the edge stips (as shown in the figure) and from the non-copper side cut and solder the single core wire such as to connect those two tinned tripads to the tripads below them which are each one strip further towards the centre (as shown).
 
@@ -60,11 +60,11 @@ Procedure
 
 * Make the heatsink conducter pad from a 24 x 34 mm piece of the self-adhesive foil as shown in the pictures below (all measurements are in mm).
 
-![PUMA LED Tripad Heatsink](Images/PUMA_LED_Tripad_Heatsink_1.png)
+![PUMA LED Tripad Heatsink](Images/PUMA_LED_Tripad-Heatsink_1.png)
 
 * Apply the heatsink conducter pad as shown below taking care not to cross circuit the two central tinned tripads to each other.
 
-![PUMA LED Tripad Heatsink](Images/PUMA_LED_Tripad_Heatsink_2.png)
+![PUMA LED Tripad Heatsink](Images/PUMA_LED_Tripad-Heatsink_2.png)
 
 * When ready to fit the board to the LED holdert and and LED apply heat transfer compound to the heatsink area of the LED and board using your applicator before attaching the board to the LED.
 
