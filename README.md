@@ -27,6 +27,12 @@ PUMA is an open source 3D printed traditional-style direct vision microscope des
 * It is designed to be easily used by those already familiar with standard bench-top microscopes - PUMA does NOT seek to 're-invent' the microscope.
 * It is designed to be fully DIY for those who want to have the greatest cost savings - and only uses widely available standard parts.
 
+Example Images from PUMA
+------------------------
+The picture below were taken with a wide field camera. They are taken at various magnifications and the phase image is cropped. The first row from left to right show: Bright field Kohler illumination x100 oil immersion objective H&E (chronic inflammation), transpolarisation throught crossed polars of striated muscle to tongue x40 objective H&E stain, epifluorescence of Soncus flower bud and pollen grains x40 objective fluorescein stain. The bottome row from left to right shows: Epi-illumination through crossed polars of a circuit board x4 objective, dark ground microscopy of an unstained section of colon x10 objective, Schlieren phase contrast of colonic crypt cells x100 oil immersion using the spatial light modulator (see below).
+
+![PUMA Example Modalties 1](Images/ReadMe_Modalities_1.png)
+![PUMA Example Modalties 2](Images/ReadMe_Modalities_2.png)
 
 Advantages:
 ----------
