@@ -52,9 +52,9 @@ HIGH QUALITY ILLUMINATION: Full Kohler illumination with access to illumiated fi
 
 SPATIAL LIGHT MODULATOR (SLM): Unlike many commecrially available professional scopes - whose condenser aperture can only be opened and closed in a circular pattern or use a central blocking spot for darkfield mode - the PUMA has a highly flexible condenser aperture. This can be made to be of any arbitrary pattern using either standard physical aperture templates (see first image below showing the manual filter system on teh left with some 3D printed layered template filters in situ and the TFT-base SLM on the right with its boot-up screen far right) or the PUMA SLM - a TFT 240x240 pixel display unit that can be programed to have any arbitrary pattern on that pixel grid and not limited to black / white all-or-nothing transmission (see second picture below which shows the SLM infront of a striplight with some example apertures for dark ground microscopy and phase contrast). This makes condenser-based phase contrast simple to achieve as well as provide a basis for Fourier ptychography, Fourier tomographic depth scanning and other Fourier optics methods. One can even program the aperture to modulate according to the shape of the specimen currently being viewed to have 'object aware' aperture optimisation.
 
-![PUMA Example Scopes](Images/ReadMe_Sm_SLM_Aperture_1.png)
+![PUMA Condenser Apertures, manual and electronic SLM](Images/ReadMe_Sm_SLM_Aperture_1.png)
 
-![PUMA Example Scopes](Images/ReadMe_Sm_SLM_Aperture_1.png)
+![PUMA Examples of SLM Aperture Patterns](Images/ReadMe_Sm_SLM_Aperture_2.png)
 
 MORTORISED FOCUS OPTION: There is an option to use a motor for focussing which gives greater stability and accuracing to the focus mechanism.
 
