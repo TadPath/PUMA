@@ -9,8 +9,8 @@ This project is released under the following licenses:
  
  For documentation: the GNU Free Documentation License, Version 1.3
                        
-Intro:
-------
+Introduction
+------------
 PUMA is an Open Source (GPL v3.0) 3D printed light microscope system designed for direct eye observations and ultra-portability with advanced options for digital imaging, measurements and computer control. The name PUMA is an acronym of some of its most important distinguishing features: [P]ortable, [U]pgradeable, [M]odular, [A]ffordable
 
 As a professional medical Pathologist I have had the privilege of usng high quality optical microscopes routinely. I know what a great optical image they provide, how comfortable they are to look down and also how horrendously EXPENSIVE they are to buy and maintain putting them beyond reach of most people. I designed the PUMA scope to make such a high quality optical viewing microscopy experience available to people without such generous funding resources.
@@ -34,7 +34,7 @@ The pictures below were taken with a wide field camera ontop of an eyepiece to s
 ![PUMA Example Modalties 1](Images/ReadMe_Modalities_1.png)
 ![PUMA Example Modalties 2](Images/ReadMe_Modalities_2.png)
 
-Advantages:
+Advantages
 ----------
 
 PORTABLE: PUMA is totally portable. Not only is it small and lightweight but it does NOT require a computer, smart phone, camera or PC monitor to operate. It does have advanced options including an in-built computer and motorised Z-stage but even those options are driven by a small dedicated battery-operated control console. There is no need to plug into the mains. Solar powered battery chargers can be used to keep standard batteries topped up (AA and 9V batteries can be used). So PUMA can be used for extended periods in remote places without mains electricity and without internet connectivity. It can be quickly 'field-stripped' for transport without tools and likewise reassembled. There is also the option to use a mains power adapter if full portability is not required.
