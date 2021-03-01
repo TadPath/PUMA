@@ -66,7 +66,7 @@ Procedure
 
 ![PUMA LED Tripad Heatsink](Images/PUMA_LED_Tripad-HeatSink_2.png)
 
-* When ready to fit the board to the LED holdert and and LED apply heat transfer compound to the heatsink area of the LED and board using your applicator before attaching the board to the LED.
+* When ready to fit the board to the LED holder and LED apply heat transfer compound to the heatsink area of the LED and board using your applicator before attaching the board to the LED.
 
 PJT
 
