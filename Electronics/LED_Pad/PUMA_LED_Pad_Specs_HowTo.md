@@ -60,11 +60,11 @@ Procedure
 
 * Make the heatsink conducter pad from a 24 x 34 mm piece of the self-adhesive foil as shown in the pictures below (all measurements are in mm).
 
-![PUMA LED Tripad Heatsink](Images/PUMA_LED_Tripad-Heatsink_1.png)
+![PUMA LED Tripad Heatsink](Images/PUMA_LED_Tripad-HeatSink_1.png)
 
 * Apply the heatsink conducter pad as shown below taking care not to cross circuit the two central tinned tripads to each other.
 
-![PUMA LED Tripad Heatsink](Images/PUMA_LED_Tripad-Heatsink_2.png)
+![PUMA LED Tripad Heatsink](Images/PUMA_LED_Tripad-HeatSink_2.png)
 
 * When ready to fit the board to the LED holdert and and LED apply heat transfer compound to the heatsink area of the LED and board using your applicator before attaching the board to the LED.
 
