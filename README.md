@@ -29,7 +29,7 @@ PUMA is an open source 3D printed traditional-style direct vision microscope des
 
 Example Images from PUMA
 ------------------------
-The picture below were taken with a wide field camera. They are taken at various magnifications and the phase image is cropped. The first row from left to right show: Bright field Kohler illumination x100 oil immersion objective H&E (chronic inflammation), transpolarisation throught crossed polars of striated muscle to tongue x40 objective H&E stain, epifluorescence of Soncus flower bud and pollen grains x40 objective fluorescein stain. The bottome row from left to right shows: Epi-illumination through crossed polars of a circuit board x4 objective, dark ground microscopy of an unstained section of colon x10 objective, Schlieren phase contrast of colonic crypt cells x100 oil immersion using the spatial light modulator (see below).
+The pictures below were taken with a wide field camera ontop of an eyepiece to show the whole field of view (except that the last image is cropped). The first row from left to right shows: Bright field Kohler illumination x100 oil immersion objective H&E (chronic inflammation), trans-polarisation through crossed polars x40 objective H&E (striated muscle of tongue), epifluorescence x40 objective fluorescein stain (*Soncus* flower bud and pollen grains). The bottom row from left to right shows: Epi-illumination through crossed polars x4 objective (circuit board), dark ground microscopy x10 objective unstained section (colon), Schlieren phase contrast x100 oil immersion objective using the spatial light modulator (colonic crypt cells).
 
 ![PUMA Example Modalties 1](Images/ReadMe_Modalities_1.png)
 ![PUMA Example Modalties 2](Images/ReadMe_Modalities_2.png)
