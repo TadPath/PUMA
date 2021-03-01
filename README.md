@@ -1,4 +1,4 @@
-#PUMA 3D PRINTED MULTIMODALITY MICROSCOPE 
+PUMA 3D PRINTED MULTIMODALITY MICROSCOPE 
 ========================================
 
 ![PUMA Example Scopes](Images/ReadMe_Sm_Scopes.png)
@@ -9,7 +9,7 @@ This project is released under the following licenses:
  
  For documentation: the GNU Free Documentation License, Version 1.3
                        
-##Intro:
+Intro:
 ------
 PUMA is an Open Source (GPL v3.0) 3D printed light microscope system designed for direct eye observations and ultra-portability with advanced options for digital imaging, measurements and computer control. The name PUMA is an acronym of some of its most important distinguishing features: [P]ortable, [U]pgradeable, [M]odular, [A]ffordable
 
@@ -28,7 +28,7 @@ PUMA is an open source 3D printed traditional-style direct vision microscope des
 * It is designed to be fully DIY for those who want to have the greatest cost savings - and only uses widely available standard parts.
 
 
-##Advantages:
+Advantages:
 ----------
 
 PORTABLE: PUMA is totally portable. Not only is it small and lightweight but it does NOT require a computer, smart phone, camera or PC monitor to operate. It does have advanced options including an in-built computer and motorised Z-stage but even those options are driven by a small dedicated battery-operated control console. There is no need to plug into the mains. Solar powered battery chargers can be used to keep standard batteries topped up (AA and 9V batteries can be used). So PUMA can be used for extended periods in remote places without mains electricity and without internet connectivity. It can be quickly 'field-stripped' for transport without tools and likewise reassembled. There is also the option to use a mains power adapter if full portability is not required.
@@ -64,7 +64,7 @@ STURDY Z-STAGE: The PUMA Z-stage is based on the thread and timing belt mechanis
 STANDARD XY STAGE: The PUMA specimen stage is of a familiar design using standard stage clips or an standard XY mechanical caliper to hold and manipulate a standard microscope slide over its full range of motion (more than 50 x 25 mm). This allows a standard microscope slide to be screened across it whole viewable area as professional biological microscopists will be used to. PUMA makes no attempt to re-invent the microscope stage using 3D printing.
 
 
-##Limitations
+Limitations
 -----------
 
 Of course a 3D printed, plastic-bodied microscope will have limitations compared to all-metal precision engineered research scopes. The main limitations of the PUMA scope are:
