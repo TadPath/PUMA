@@ -62,14 +62,15 @@ Procedure for the DIY Motherboard
 
 ![PUMA Motherboard Tripad Finishing](Images/MB_TP_Components.png)
 
-* Once the PUMA Control software is loaded onto the Nano you should test it all works with the required peripherals.
+* Once the PUMA Control software is loaded onto the Nano you should test it all works with the required peripherals (see the PUMA Control Console specification in the PUMA GitHub repository for specifications as to the required perihperals).
 
 
 Procedure for the PCB Motherboard
 ---------------------------------
 * This is best made by a professional PCB manufacturing service.
 * The board edge cuts measure 60.96 mm by 44.45 mm so it is slightly larger than the DIY tripad version but the holes are in identical spacing between the two versions and they are interchangeable in the PUMA Control Console (either will fit).
-* Make or otherwise obtain a drilled double-sided PCB with the specifications contained in the documents in the KiCAD folder of this repository. Solder the components in their places.
+* Make or otherwise obtain a drilled double-sided PCB with the specifications contained in the documents in the KiCAD folder of this repository.
+* Solder the components in their places (if not already done for you) and test.
  
 
 PJT
