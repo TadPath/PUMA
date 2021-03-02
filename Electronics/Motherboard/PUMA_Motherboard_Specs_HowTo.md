@@ -9,7 +9,7 @@ For documentation: the GNU Free Documentation License, Version 1.3
 
 Introduction
 ------------
-The PUMA motherboard is an essential component of the PUMA Control Console (PCC) - the device which lets the user control the Z-motor, lamp brightness and TFT displays of the spatial light modulator (SLM) and head-up-display (HUD).
+The PUMA motherboard is an essential component of the PUMA Control Console (PCC) - the device which lets the user control the Z-motor, lamp brightness and TFT displays of the spatial light modulator (SLM) and heads-up-display (HUD).
 The motherboard houses the Arduino Nano microcontroller and provides reverse polarity protection for all PCC devices and dedicated IO ports for all peripherals.
 A video tutorial was made which shows how to construct the PCC with a ready-prepared motherboard. This How To guide only discusses the construction of the motherboard.
 There are two forms of the motherboard:
