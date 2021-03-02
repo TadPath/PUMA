@@ -15,7 +15,7 @@ A summary of what each file contains is given below. For details about the parts
 Summary of Each File
 --------------------
 
-AR_Projector
+AR_Projector:
  The augmented reality projector used to provide a heads-up-display.
  
 Binocular_v3.1
