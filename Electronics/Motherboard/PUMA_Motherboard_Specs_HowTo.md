@@ -18,7 +18,6 @@ There are two forms of the motherboard:
 
 The two boards (PCB and DIY) are electronically identical and physically interchangeable. The same circuit diagram applies to both.
 
-
 Required Components
 -------------------
 * Tripad electronic prototyping board
@@ -43,7 +42,6 @@ Circuit Diagram
 ---------------
 ![PUMA Motherboard Circuit](Images/MB_TP_Circuit.png)
 
-
 Procedure for the DIY Motherboard
 ---------------------------------
 * In the following instructions refer to the below diagram for wiring and placement of components. The diagram is a view from the top / component / non-copper surface. The copper tripads are shown in green as if the board were transparent. Wiring and connections are shown either as thick red lines or thin white lines:
@@ -64,15 +62,20 @@ Procedure for the DIY Motherboard
 
 * Once the PUMA Control software is loaded onto the Nano you should test it all works with the required peripherals (see the PUMA Control Console specification in the PUMA GitHub repository for specifications as to the required perihperals).
 
-
 Procedure for the PCB Motherboard
 ---------------------------------
 * This is best made by a professional PCB manufacturing service.
 * The board edge cuts measure 60.96 mm by 44.45 mm so it is slightly larger than the DIY tripad version but the holes are in identical spacing between the two versions and they are interchangeable in the PUMA Control Console (either will fit).
 * Make or otherwise obtain a drilled double-sided PCB with the specifications contained in the documents in the KiCAD folder of this repository.
 * Solder the components in their places (if not already done for you) and test.
+
+Making the Custom Limit Switch Cable
+------------------------------------
+The limit switches used as part of the motorised Z stage kit come with a 4 pin JST XH connector cable. However they only have three active connections and so only three wires are conveyed with one of the 4 pins of the limit switch JST connector unused. To save space on the motherboard a 3-pin JST header is used. So there is a need to convert this 4-pin connector cable into a 3-pin cable at one end. To do this, cut off the 4 pin JST connector from one end of the limit switch connecting cable and strip the cut ends of the wire bare for a few mm then tin them. Insert the wires into one end of a double-headed 3-pin JST cable in the manner shown in the below figure and fix them in place with a method of your choice (simple electrical insulation tape will work).
+
+![PUMA Motherboard Limit Switch Cable](Images/PUMA_TP_LimitSw.png)
  
 
 PJT
 
-First written: 01.03.2021 
+First written: 02.03.2021 
