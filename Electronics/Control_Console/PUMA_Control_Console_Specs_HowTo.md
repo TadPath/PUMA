@@ -18,14 +18,14 @@ A video tutorial was made which shows how to construct the PCC. This 'How To' gu
 Required Components
 -------------------
 * The following 3D printed parts as specified in the 'PUMA_3D_Printing_Guide':
-	> All parts in the chapter 'PUMA Control Console'
-	> The part 'PL_Knob.stl' from the 'PUMA Lite' chapter.
+    1 All parts in the chapter 'PUMA Control Console'
+    2 The part 'PL_Knob.stl' from the 'PUMA Lite' chapter.
 * The following pre-assembled PCBs:
-	> PUMA Motherboard
-	> Arduino Nano v.3 microcontroller
-	> ULN2003 stepper controller board (for a 28BYJ48  motor) of the type shown in the below picture.
+    1 PUMA Motherboard
+    2 Arduino Nano v.3 microcontroller
+    3 ULN2003 stepper controller board (for a 28BYJ48  motor) of the type shown in the below picture.
 	![PUMA Stepper controller](Images/PCC_Stepper_controller.png)
-	> 
+    4  
 * Solder
 * Track connecting wire: Single core wire and multicore ribbon cables that can be soldered and that can fit in the prototyping board's holes.
 * JST XH PCB connector cables (20 cm long each) and headers (right angled versions) of the following pin numbers: 2, 3, 4, 5, 7, 8
