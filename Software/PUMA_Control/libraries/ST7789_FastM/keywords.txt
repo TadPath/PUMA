@@ -1,0 +1,17 @@
+Arduino_ST7789	KEYWORD3
+
+init	KEYWORD2
+invertDisplay	KEYWORD2
+partialDisplay	KEYWORD2
+sleepDisplay	KEYWORD2
+enableDisplay	KEYWORD2
+idleDisplay	KEYWORD2
+resetDisplay	KEYWORD2
+setScrollArea	KEYWORD2
+setScroll	KEYWORD2
+setPartArea	KEYWORD2
+powerSave	KEYWORD2
+rgbWheel	KEYWORD2
+RGBto565	KEYWORD2
+drawImage	KEYWORD2
+drawImageF	KEYWORD2
