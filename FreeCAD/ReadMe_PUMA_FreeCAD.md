@@ -7,7 +7,7 @@ These are the source CAD files for the PUMA 3D-Printable Microscope Project. Not
 
 These CAD files were made in FreeCAD v. 0.18 using 64 bit Arch Linux.
 
-For information on how to generate STL files from the models in these CAD files, see the 'PUMA_3D_Printing_Guide' in teh 3D_Printing folder on the PUMA GitHub page.
+For information on how to generate STL files from the models in these CAD files, see the 'PUMA_3D_Printing_Guide' in the 3D_Printing folder on the PUMA GitHub page.
 
 A summary of what each file contains is given below. For details about the parts and construction of the microscope see the detailed documentation and tutorials.
 
