@@ -43,48 +43,36 @@ The Meaning of Audible Signals
 ------------------------------
 The only source of visual feedback is the HUD or SLM display. If you do not use either of these devices then the PCC can still be used e.g. for control of the Z-motor and also it gives an audible warning if the LED bulb is being over-powered. You could always attach a free 5 volt ST7789 TFT module to the unit to get visual feedback of the GUI if you like ('free' as in not part of any module) but you would need a mirror to read it! If you don't want to do that then the audible signals have been carefully designed to have meanings that will help you know what you are doing. These are the audible signals and what they mean:
 
-// Buzzer Signals
-#define BZ_SILENCE      0
-#define BZ_ACKNOWLEDGED 1
-#define BZ_PROMPT       2
-#define BZ_FORBIDDEN    3
-#define BZ_TRILL        4
-#define BZ_LAMPHOT      5
-#define BZ_TIMEOUT      6
+// Buzzer Signals  
+#define BZ_SILENCE      0  
+#define BZ_ACKNOWLEDGED 1  
+#define BZ_PROMPT       2  
+#define BZ_FORBIDDEN    3  
+#define BZ_TRILL        4  
+#define BZ_LAMPHOT      5  
+#define BZ_TIMEOUT      6  
 
 
-**SILENCE**
+**SILENCE**  
 A special case override to the ACKNOWLEDGED signal for certain key actions. Specifically when moving the pointer around or moving focus up or down then the ACKNOWLEDGED signal is replaced by SILENCE (i.e. no sound and no delay in the navi_loop function that looks for key actions).
 
-**ACKNOWLEDGED**
+**ACKNOWLEDGED**  
+Single beep = acknowledge a key action. The total amount of delay introduced by a buzzer signal must be at least 200 ms regardless of Acklen in order to minimise the risk of inadvertent double-key activation.
 
-beep(Acklen); // Default Acklen = 50
-* Single beep = acknowledge a key action. The total amount of delay introduced by a buzzer signal must be at least 200 ms regardless of Acklen in order to minimise the risk of inadvertent double-key activation.
+**PROMPT**  
+Double beep = bring user's attention to a normal state or decision. For example when boot up is complete (so the system is ready to accept key commands) or when a confirmation question requiring a response is being asked by the system ('Do you really want to delete all data points?')
 
-**PROMPT**
+**FORBIDDEN**  
+Triple fast beep = bring user's attention to an inability to perform the desired action (due, e.g. to a limit having been reached or a condition not met). This will occur if a user tries to access motor functions if the motor has not been homed or a min/max motion limit is reached. It will also sound if you try to undo a drawing mark when there are no more marks left to undo, etc.
 
-beep_signal(2,100);
-* Double beep = bring user's attention to a normal state or decision. For example when boot up is complete (so the system is ready to accept key commands) or when a confirmation question requiring a response is being asked by the system ('Do you really want to delete all data points?')
-
-**FORBIDDEN**
-
-beep_signal(3,50);
-* Triple fast beep = bring user's attention to an inability to perform the desired action (due, e.g. to a limit having been reached or a condition not met). This will occur if a user tries to access motor functions if the motor has not been homed or a min/max motion limit is reached. It will also sound if you try to undo a drawing mark when there are no more marks left to undo, etc.
-
-**TRILL**
-
-beep_signal(3,10);
-* Trill = The system is entering silent mode. This is essentially a very fast triple beep. This is the only meaning for this signal.
+**TRILL**  
+Trill = The system is entering silent mode. This is essentially a very fast triple beep. This is the only meaning for this signal.
 
 **TIMEOUT**
+6 beeps = the end of countdown audible signal for the timer. This will override the mute setting if the user has set an audible signal for a count-down (either alone or in combination with a visible signal).
 
-(formed by a local loop - that includes a call to the Beep_signal function)
-* 6 beeps = the end of countdown audible signal for the timer. This will override the mute setting if the user has set an audible signal for a count-down (either alone or in combination with a visible signal).
+**LAMPHOT**  
+4 beeps  = the lamp is being over-driven with too much current and may be destroyed if immediate action is not taken. This will override the user's mute preference because it is a safety warning.
 
-**LAMPHOT**
-
-beep_signal(4,100);
-* 4 beeps  = the lamp is being over-driven with too much current and may be destroyed if immediate action is not taken. This will override the user's mute preference because it is a safety warning.
-
-Notes:
+Notes:  
 Sometimes a PROMPT or FORBIDDEN signal will be immediately followed by the single beep of ACKNOWLEDGED, at other times it won't.
