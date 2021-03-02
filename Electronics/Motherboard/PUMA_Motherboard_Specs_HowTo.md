@@ -40,7 +40,7 @@ Tools
 
 Circuit Diagram
 ---------------
-![PUMA Motherboard Circuit](Images/MB_Circuit.png)
+![PUMA Motherboard Circuit](Images/MB_TP_Circuit.png)
 
 
 Procedure for the DIY Motherboard
