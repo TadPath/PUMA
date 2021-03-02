@@ -15,6 +15,7 @@ A video tutorial was made which shows how to construct the PCC with a ready-prep
 There are two forms of the motherboard:
  1. A DIY form based on ready-made and widely available tripad prototyping board - no printing or etching or micro-drilling required. 
  2. A dedicated PCB design.
+ 3. 
 The two boards (PCB and DIY) are electronically identical and physically interchangeable. The same circuit diagram applies to both.
 
 
