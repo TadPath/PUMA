@@ -24,8 +24,8 @@ Required Components
     1. PUMA Motherboard
     2. Arduino Nano v.3 microcontroller
     3. ULN2003 stepper controller board (for a 28BYJ48  motor) of the type shown in the below picture.
-	![PUMA Stepper controller](Images/PCC_Stepper_controller.png)
-    4 . 
+    ![PUMA Stepper controller](Images/PCC_Stepper_controller.png)
+    4. Something else 
 * Solder
 * Track connecting wire: Single core wire and multicore ribbon cables that can be soldered and that can fit in the prototyping board's holes.
 * JST XH PCB connector cables (20 cm long each) and headers (right angled versions) of the following pin numbers: 2, 3, 4, 5, 7, 8
