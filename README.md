@@ -15,11 +15,11 @@ PUMA is an Open Source (GPL v3.0) 3D printed light microscope system designed fo
 
 As a professional medical Pathologist I have had the privilege of usng high quality optical microscopes routinely. I know what a great optical image they provide, how comfortable they are to look down and also how horrendously EXPENSIVE they are to buy and maintain putting them beyond reach of most people. I designed the PUMA scope to make such a high quality optical viewing microscopy experience available to people without such generous funding resources.
 
-Most 3D printed open source microscopes I have seen appear to be either toys or designed to be used as camera scopes with a web-cam / PiCam or smartphone. They also seem to be novel re-inventions of the microscope that would seem unfamiliar to people used to a traditional scope - that doesn't mean they are not useful in their own way of course.
+Most 3D printed open source microscopes I have seen appear to be either toys or low power inspection scopes and/or they are designed to be used as camera scopes with a web-cam / PiCam or smartphone. Many also seem to be novel re-inventions of the microscope that would seem unfamiliar to people used to operating a traditional laboratory bench top microscope - that doesn't mean they are not useful in their own way of course.
 
 PUMA is an open source 3D printed traditional-style direct vision microscope designed as a professional benchtop microscope of familar design but made with inexpensive materials and 3D printing - and made truly portable for field work. Here are its main features:
 
-* It can use professional quality standard microscope optics
+* It can use professional quality standard microscope optics including high numerical aperture (NA) objectives - upto oil immersion with NA = 1.25 (e.g. 1000x total magnification). That is enough to see bacterial morphology, individual cell chromosomes and sub-chromosomal details (such as FISH signals and banding). 
 * It is truly portable (no mains, smartphone, PC or monitor required).
 * It is a multi-modal scope with options for: bright field, fluorescence, dark ground, epi-illumination, polarisation and phase contrast. 
 * It has advanced options not usually found on even expensive lab research scopes such as an augmented reality heads-up display and a computer-controlled spatial light modulator for optical Fourier filtration.
