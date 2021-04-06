@@ -258,7 +258,7 @@ Arduino_ST7789 lcd = Arduino_ST7789(TFT_DC, TFT_RST);
  uint32_t Zpos_sw_start = 0;// Z-sweep start position
  uint32_t Zsweep_steps = 16;// Z-sweep number of Z_delta steps to sweep
  uint32_t Zsweep_delay = 0; // Z-sweep delay in ms
- uint32_t Zbacklash = 100;  // Z-backlash correction steps
+ uint32_t Zbacklash = 640;  // Z-backlash correction steps
  uint8_t  Zenergised_always = 0; // Whether to leave the coild energised till user disables them (the default is 0 to avoid problems with motor overheating and power wastage)
  int8_t   Zchangedir=1;     // Keep track of direction changes
  int8_t   Zlastdir;         //     to apply backlash steps.
@@ -389,8 +389,8 @@ Arduino_ST7789 lcd = Arduino_ST7789(TFT_DC, TFT_RST);
 // limits - a high number could push the stage past safety
 // limits up or down and a proper meaningful backlash correction
 // would never be that high. Practice shows that the default
-// setting of 100 is about right.
-#define ZBACKLASH_MAX 500
+// setting of 640 is about right.
+#define ZBACKLASH_MAX 1000
 
 // Iset the maximum speed limit at 4 because at 2 there was
 // considerable stalling of the motor.
