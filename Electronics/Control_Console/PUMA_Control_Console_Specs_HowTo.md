@@ -9,7 +9,7 @@ For documentation: the GNU Free Documentation License, Version 1.3
 
 Introduction
 ------------
-The PUMA Control Console (PCC) is the device which lets the user control the Z-motor, lamp brightness and TFT displays of the spatial light modulator (SLM) and head-up-display (HUD). A detailed illustrated user manual explaining the hardware and software is available here: [PUMA Control_User_Manual](../../../Software/PUMA_Control_Manual.pdf)  
+The PUMA Control Console (PCC) is the device which lets the user control the Z-motor, lamp brightness and TFT displays of the spatial light modulator (SLM) and head-up-display (HUD). A detailed illustrated user manual explaining the hardware and software is available here: [PUMA Control_User_Manual](../../Software/PUMA_Control_Manual.pdf)  
 A single PCC can only control one TFT device at a time so can only control the HUD or a SLM at any one time.
 If all you need is electronic control of the microscope lamp and nothing else then the PCC is overkill. I recommend you use the PUMA Lite console instead which is much easier to build (see the relevant section of the GitHub page for details on the PUMA Lite console).
 The PCC uses generic parts that are widely available with the exception of the custom PUMA motherboard. However the motherboard can be made as a DIY project (see the relevant section of the GitHub repository for details on how to make a PUMA motherboard).
