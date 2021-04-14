@@ -15,7 +15,7 @@ A video tutorial was made which shows how to construct the PCC. This 'How To' gu
 
 Required Components
 -------------------
-* The following 3D printed parts as specified in the 'PUMA_3D_Printing_Guide':
+* The following 3D printed parts as specified in the [PUMA 3D_Printing_Guide](../../3D_Printing/PUMA_3D_Printing_Guide.pdf):
     1. All parts in the chapter 'PUMA Control Console'
     2. The part 'PL_Knob.stl' from the 'PUMA Lite' chapter.
 * The following pre-assembled PCBs:
