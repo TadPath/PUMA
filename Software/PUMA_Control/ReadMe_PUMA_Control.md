@@ -12,7 +12,7 @@ This also uses a slightly modified version of  Pawel A. Hernik's "Arduino_ST7789
 
 How to Use
 ----------
-This is only a brief quick start guide. See the full ![PUMA Control_User_Manual](../PUMA_Control_Manual.pdf) for detailed and illustrated usage information.
+This is only a brief quick start guide. See the full [PUMA Control_User_Manual](../PUMA_Control_Manual.pdf) for detailed and illustrated usage information.
 Once loaded onto the Arduino Nano the Nano should be connected to the peripherals of the PUMA Control Console as described in the 'How To' guides for making that console. The following assumes all is working correctly - both hardware and software.
 Turn on the console power switch.
 
