@@ -1,13 +1,9 @@
 PUMA Project: Control Console Specifications and How To Guide
 =============================================================  
-
 ![PUMA Control_Console](Images/PCC_Frontice.png)  
-
-This project is released under the following licenses:
-
-For source code (including CAD files, STL files and computer programs) and compiled code: the GNU GENERAL PUBLIC LICENSE Version 3
-
-For documentation: the GNU Free Documentation License, Version 1.3
+This project is released under the following licenses:  
+For source code (including CAD files, STL files and computer programs) and compiled code: the GNU GENERAL PUBLIC LICENSE Version 3  
+For documentation: the GNU Free Documentation License, Version 1.3  
 
 Introduction
 ------------
