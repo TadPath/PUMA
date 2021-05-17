@@ -64,10 +64,14 @@ Procedure for the DIY Motherboard
 
 Procedure for the PCB Motherboard
 ---------------------------------
-* This is best made by a professional PCB manufacturing service.
+* This is best made by a professional PCB manufacturing service (as shown below).
 * The board edge cuts measure 60.96 mm by 44.45 mm so it is slightly larger than the DIY tripad version but the holes are in identical spacing between the two versions and they are interchangeable in the PUMA Control Console (either will fit).
 * Make or otherwise obtain a drilled double-sided PCB with the specifications contained in the documents in the KiCAD folder of this repository.
 * Solder the components in their places (if not already done for you) and test.
+
+![PUMA Motherboard PCB Front](Images/ProfPCB_Front.jpg)
+![PUMA Motherboard PCB_Back](Images/ProfPCB_Back.jpg)
+![PUMA Motherboard PCB_Finished](Images/ProfPCB_Complete.jpg)
 
 Making the Custom Limit Switch Cable
 ------------------------------------
