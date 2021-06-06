@@ -26,7 +26,7 @@ Required Components
     4. XL4015-based DC-DC step-down buck converter module with both current and voltage regulation of the type shown in the below picture.
     ![PUMA Buck converter](Images/PCC_Buck_converter.png)
     5. 5-way joystick navigation button controller for Arduino with two additional push buttons of the type shown in the below picture.
-    ![PUMA Buck converter](Images/PCC_Joystick.png)
+    ![PUMA Joystick](Images/PCC_Joystick.png)
 * A passive piezoelectric sounder buzzer: AT3040 type with a 30 mm diameter, 5.5 mm high enclosure. The enclosure to have two 2 mm fixing holes 35 mm apart. Specifications as shown in the below picture:
 ![PUMA Piezo buzzer](Images/PCC_Piezo_buzzer.png)
 * Solder
