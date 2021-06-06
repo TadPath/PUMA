@@ -1,6 +1,6 @@
 PUMA Project: PUMA Lite Control Box How To Guide
 ================================================
-![PUMA Lite](Images/PL_Complete.png)  
+![PUMA Lite](Images/PL_Complete.jpg)  
 This project is released under the following licenses:
 
 For source code (including CAD files, STL files and computer programs) and compiled code: the GNU GENERAL PUBLIC LICENSE Version 3
