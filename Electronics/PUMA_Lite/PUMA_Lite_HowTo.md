@@ -101,7 +101,7 @@ Assembly Procedure
 
 Tripping the Lamp Power Regulator
 ---------------------------------
-* With the PUMA Lite, tripping the power regulator (as described for the PUMA Control Console) does not appear to be a problem in practice but we use the same fixed 5 Ohm resistor in the circuit for added safety and to make the illumination circuit with the PUMA Lite identical to the illumination circuit with the PCC PUMA Control Console.
+* With the PUMA Lite, tripping the power regulator (as described for the PUMA Control Console) does not appear to be a problem in practice but we use the same fixed 5 Ohm resistor in the circuit for added safety and to make the illumination circuit with the PUMA Lite identical to the illumination circuit with the PUMA Control Console.
 
 
 Power Consumption
