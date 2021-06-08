@@ -28,7 +28,7 @@ Required Components
 * ON/Off rectangular rocker switch, 10A/125V or 6A/250V, SPST type. Dimensions: Flange (2.05 cm x 1.5 cm), body size (1.8 cm x 1.15 cm) with 0.48 cm wide connector lugs. Switch body height below flange 1.05 cm and connector lug height 0.85 cm.
 * One 9v PP3-type battery snap connectors with 150 mm leads
 * A power supply: Either a 9v battery (type 6LR61 PP3) or a mains regulated power adapter that can put out 9 volts regulated DC and at least 1 amp of current with a PP3 connector.
-* Solderable spade connectors with insulator covers of sizes 4.8 mm and 2.8 mm (widths).
+* Solderable spade connectors with insulator covers of sizes 4.8 mm and 2.8 mm (widths). You could forego these and solder all connections instead as an alternative.
 * Scissors, screw driver, long nose pliars, some insulated wire and wire strippers
 
 
@@ -60,6 +60,7 @@ Assembly Procedure
 ------------------
 * Pre-thread all holes in the casing that are designed to take the thread of a screw. Don't go all the way in and be especially careful of the shallow holes on the front panel otherwise you could deform the external surface or go all the way through with the screw.
 * Bend the pins of the p-MOSFET as shown in the figure. The middle pin is bent right back and the other two pins are bent and turned to line up so that they fit into the input terminal block of the buck converter as shown. The negative pin will need to be cut short by a few mm to allow this.
+
 ![p-MOSFET](Images/PL_MOSFET.jpg)
 
 * Take the PP3 connector and wrap the negative lead end around the negative pin of the p-MOSFET as shown in the figure (no need to solder it to the pin). To the positive lead of the PP3 connector solder a 4.8 mm spade connector. To the middle pin of the p-MOSFET solder a wire that has a 4.8 mm connector at its other end. You can then insert the p-MOSFET into the buck converter input block and connect the spades to the on/off switch. Finally, connect the 9V battery to the PP3 connector. The buck converter can now be powered up by turning the switch on.
@@ -100,15 +101,15 @@ Assembly Procedure
 
 Tripping the Lamp Power Regulator
 ---------------------------------
-* It is important to be aware of a problem that can arise relating to the behaviour of the particular XL4015 power regulator board that we use in this unit. This problem occurs when using the unit in a 'low current supply situation'. Examples of a 'low current supply situation' are:
-    1. when the battery is running low or
-    3. if an external power source is used that cannot deliver enought current for the lamp.
-* In any of these circumstances the power regulator may 'trip' if it experiences a sudden drop in input voltage and there is insufficient resistance across its output terminals (which will be the case if the brightness potentiometer is at or near its brightest setting – i.e. its lowest resistance setting).
-* By 'Trip' I mean that the output current suddenly becomes unregulated and the LED bulb of the microscope will draw too much current, something like 700 - 800 mA when the bulb’s maximum rating is 330 mA. You may notice this as a sudden increase in brightness of the bulb.
-* If this happens you must turn the brightness down immediately using the brightness potentiometer or else the bulb life will be dramatically shortened. Also, if you use a battery it will be drained faster.
-* It it for this reason that we employ a fixed 5 Ohm resistor in the cable that connects the brightness potentiometer to the power regulator. That 5 Ohm resistor ensures that there is always at least some resistance in the circuit, even when the potentiometer is at its minimum-resistance setting. This is important because the intrinsic resistance of the LED bulb is negligible. So this 5 ohm resistor will limit the current if a trip occurs. Without this resistor the current to the LED could exceed 1 Amp in a trip situation and could blow the LED instantly. It only provides partial protection however, buying you a little time, because 700 - 800 mA is still way too high for this LED and you must act quickly to preserve the life of your bulb by turning the brightness down with the brightness potentiometer.
-* A common scenario that induces a 'trip' of the power board is if the unit is switched on with the lamp potentiometer set at or near full brightness because the sudden inrush of current to the bulb causes the input voltage to drop and so trip the power regulator.
-* As you can probably work out from the above, one way to minimise the risk of a power board trip is to always keep the bulb brightness potentiometer at a low setting whenever you switch on the unit.
+* With the PUMA Lite, tripping the power regulator (as described for the PUMA Control Console) does not appear to be a problem in practice but we use the same fixed 5 Ohm resistor in the circuit for added safety and to make the illumination circuit with the PUMA Lite identical to the immunimation circuit with the PCC PUMA Control Console.
+
+
+Power Consumption
+-----------------
+The PUMA Lite has no in-built ammeter. However measurements have shown that the output current to the lamp varies from about 10 mA at minimum brightness to about 290 mA at maximum brightness. The holes in the top of the casing allow visualisation of the LED indicators on the power regulator board.
+When power is supplied to the power regulator board the LED closest to the outpit terminals will be lit. This LED alone will continue to show when the bulb draws current upto about 27 mA. Higher current draw than that will start to illuminate the LED next to it (this just starts to come on at about 28 mA) and when both LEDs are at equal brightness the current draw is about 30 mA. The LED closest to the output terminals will gradually weaken and switch off when the current draw to the lamp reaches about 32 mA. No change in LED status will be seen as the brightness is further increased but the maximum brightness occurs at a current draw of about 290 mA.
+The LED on the other side of the power board will only go on if the current draw reaches 330 mA so this LED would not normally light at any stage.
+From a 9 Volt battery the unit will consume about 1650 mW at maximum brightness and only about 185 mW at minimum brightness. The current drawn from the battery will vary between 260 mA and 25 mA respectively.
  
 
 PJT
