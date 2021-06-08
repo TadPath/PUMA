@@ -67,7 +67,7 @@ Assembly Procedure
 ![Battery connections](Images/PL_BattCon.jpg)
 
 * At this stage,with the buck converter powered on, you should adjust the trimmer potentiometers on the buck converter to ensure the correct current and voltage regulations are set (see figures below).
-* To set the correct current set your multimeter to measure current in the range of 20 Amps DC, place the meter probes on the output terminals and adjust the trimmer potentiometer closest to the output side of the board until a reading of 0.33 A is achieved.
+* To set the correct current set your multimeter to measure current in the range of 20 Amps DC, place the meter probes on the output terminals and adjust the trimmer potentiometer closest to the output side of the board until a reading of 0.33 A is achieved. Note that the LED nearest the battery input terminals must be lit during this procedure to indicate that the board is limiting the current (as shown in the picture). If it is not lit, disconned and reconnect the power (unsing the on/off switch) and try again.
 ![Set the current](Images/PL_SetCurrent.jpg)
 
 * To set the correct voltage set your multimeter to measure volts (20 V DC range), place the meter probes on the output terminals and adjust the trimmer potentiometer closest to the inut side of the board until a reading of 5.0 V is achieved. The buck converter board can now be powered down and the on/off switch disconnected from the spades.
