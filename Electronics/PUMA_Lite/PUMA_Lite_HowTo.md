@@ -16,9 +16,10 @@ Required Components
 -------------------
 ![Required Components](Images/PL_Parts.jpg)
 * The following 3D printed parts as specified in the 'PUMA_3D_Printing_Guide':
-    1. All parts in the chapter 'PUMA Lite'
+    > All parts in the chapter 'PUMA Lite'
 * The following pre-assembled PCBs:
-    1. XL4015-based DC-DC step-down buck converter module with both current and voltage regulation of the type shown in the below picture.
+    > XL4015-based DC-DC step-down buck converter module with both current and voltage regulation of the type shown in the below picture.
+    
     ![PUMA Buck converter](Images/PCC_Buck_converter.png)
 * Solder
 * Phono socket panel mount type (and a phono plug to assist fitting the socket).
@@ -26,9 +27,9 @@ Required Components
 * Through hole resistor: 5 Ohm, 1%, 1W, Axial
 * Precision potentiometer 200 ohm: Wire wound, bushing mount, Bourns 3590s type.
 * ON/Off rectangular rocker switch, 10A/125V or 6A/250V, SPST type. Dimensions: Flange (2.05 cm x 1.5 cm), body size (1.8 cm x 1.15 cm) with 0.48 cm wide connector lugs. Switch body height below flange 1.05 cm and connector lug height 0.85 cm.
-* One 9v PP3-type battery snap connectors with 150 mm leads
-* A power supply: Either a 9v battery (type 6LR61 PP3) or a mains regulated power adapter that can put out 9 volts regulated DC and at least 1 amp of current with a PP3 connector.
-* Solderable spade connectors with insulator covers of sizes 4.8 mm and 2.8 mm (widths). You could forego these and solder all connections instead as an alternative.
+* One 9v PP3-type battery snap connector with 150 mm long leads.
+* A power supply: Either a 9v battery (type 6LR61 PP3) or a mains regulated power adapter that can put out 9 volts regulated DC (actually anything between 8 V and 36 V will be acceptable) and at least 300 mA of current with a PP3 connector.
+* Solderable spade connectors with insulator covers of sizes 4.8 mm and 2.8 mm (widths). You could forego these and solder all connections instead as an alternative. Perticularly it may be advantageous to solder the leads to the potentiometer lugs as these are the ones most likely to fall off by accident.
 * Scissors, screw driver, long nose pliars, some insulated wire and wire strippers
 
 
@@ -107,9 +108,9 @@ Tripping the Lamp Power Regulator
 Power Consumption
 -----------------
 The PUMA Lite has no in-built ammeter. However measurements have shown that the output current to the lamp varies from about 10 mA at minimum brightness to about 290 mA at maximum brightness. The holes in the top of the casing allow visualisation of the LED indicators on the power regulator board.
-When power is supplied to the power regulator board the LED closest to the outpit terminals will be lit. This LED alone will continue to show when the bulb draws current upto about 27 mA. Higher current draw than that will start to illuminate the LED next to it (this just starts to come on at about 28 mA) and when both LEDs are at equal brightness the current draw is about 30 mA. The LED closest to the output terminals will gradually weaken and switch off when the current draw to the lamp reaches about 32 mA. No change in LED status will be seen as the brightness is further increased but the maximum brightness occurs at a current draw of about 290 mA.
+When power is supplied to the power regulator board the LED closest to the output terminals will be lit. This LED alone will continue to show when the bulb draws current upto about 27 mA. Higher current draw than that will start to illuminate the LED next to it (this just starts to come on at about 28 mA) and when both LEDs are at equal brightness the current draw is about 30 mA. The LED closest to the output terminals will gradually weaken and switch off when the current draw to the lamp reaches about 32 mA. No change in LED status will be seen as the brightness is further increased but the maximum brightness occurs at a current draw of about 290 mA.
 The LED on the other side of the power board will only go on if the current draw reaches 330 mA so this LED would not normally light at any stage.
-From a 9 Volt battery the unit will consume about 1650 mW at maximum brightness and only about 185 mW at minimum brightness. The current drawn from the battery will vary between 260 mA and 25 mA respectively.
+From a 9 Volt battery the unit will consume about 1650 mW at maximum brightness and only about 185 mW at minimum brightness. The current drawn from the battery will vary between 260 mA and 25 mA respectively. If using a 12V external power supply the current draw will be between 167 and 22 mA.
  
 
 PJT
