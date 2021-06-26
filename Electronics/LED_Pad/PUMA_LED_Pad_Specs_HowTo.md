@@ -9,7 +9,7 @@ For documentation: the GNU Free Documentation License, Version 1.3
 
 Introduction
 ------------
-The LED Pad is a simple custom electronics connector board that allows a surface mount LED of the type used in the PUMA microscope to connect to the cable that brings it power. This board also allows that LED to connect by sinple surface pressure alone - no soldering of the LED connector tags are required - so if an LED 'blows' or you want to switch to a different LED (e.g. switch between white light and fluorescein stimulating blue light) you can easily do this without soldering.
+The LED Pad is a simple custom electronics connector board that allows a surface mount LED of the type used in the PUMA microscope to connect to the cable that brings it power. This board also allows that LED to connect by simple surface pressure alone - no soldering of the LED connector tags are required - so if an LED 'blows' or you want to switch to a different LED (e.g. switch between white light and fluorescein stimulating blue light) you can easily do this without soldering.
 The LED Pad is made from standard tripad electronics prototyping board that is cut to size  - no PCB printing or etching or drilling is required.
 
 Required Components
