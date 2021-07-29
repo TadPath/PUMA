@@ -1,7 +1,16 @@
 /* ****************************************************************** */
 /*                                                                    */
-/* PUMA Control v1.0                                                  */
+/* PUMA Control v1.1                                                  */
 /* =================                                                  */
+/*                                                                    */
+/* V 1.1 is the first full release (after the pre-release).           */
+/* Compared to v1.0 is has all the same feature plus the ability to   */
+/* set different colours for the various components of the aperture   */
+/* function of the SLM thereby allowing the easy use of custom        */
+/* Rheinberg filters. Other features are as for v 1.0.                */
+/*                                                                    */
+/* ------------------------------------------------------------------ */
+/* Description for v 1.0                                              */
 /*                                                                    */
 /* This is the source code for the Arduino Nano to run the control    */
 /* operations for the Optarc PUMA microscope.                         */
@@ -61,7 +70,7 @@
 /* "Arduino_ST7789_Fast" library which I made called 'ST7789_FastM'   */
 /*                                                                    */
 /*           This program was written by Dr P. J. Tadrous  20.11.2020 */
-/*                                               Last edit 13.02.2021 */
+/*                                               Last edit 08.07.2021 */
 /*                                                                    */
 /* ****************************************************************** */
 
@@ -297,7 +306,7 @@ Arduino_ST7789 lcd = Arduino_ST7789(TFT_DC, TFT_RST);
  uint8_t  Beeper_mode = BM_ON;
  uint8_t  Control_mode = CM_Z_MOTOR;
  uint8_t  Previous_cm  = CM_Z_MOTOR;
- uint16_t Colour[7]={WHITE,WHITE,WHITE,WHITE,WHITE,WHITE,WHITE};
+ uint16_t Colour[10]={WHITE,WHITE,WHITE,WHITE,WHITE,WHITE,WHITE,WHITE,BLACK,BLACK};
  uint8_t  Ptr_X=120,Ptr_Y=120; // Pointer (arrow, etc.) coordinates
  uint8_t  Mkr_X[MKR_MAX],Mkr_Y[MKR_MAX],Mkr_idx=0; // Marker storage arrays 
  uint8_t  Ptr_mode = CO_POINT; // Measurement mode for pointer / marker
@@ -476,6 +485,9 @@ Arduino_ST7789 lcd = Arduino_ST7789(TFT_DC, TFT_RST);
 #define COLOUR_GRATICULE  Colour[4]
 #define COLOUR_LAMP       Colour[5]
 #define COLOUR_PLAIN      Colour[6]
+#define COLOUR_AP_FG      Colour[7]
+#define COLOUR_AP_BG      Colour[8]
+#define COLOUR_AP_CS      Colour[9]
 
 // If no lamp is connected there will be an abnormally high
 // lamp current reading in the lamp meter ()~1000) so we need
@@ -556,7 +568,7 @@ void setup()
   lcd.setCursor(40,104);
   lcd.print(F("v."));
   lcd.setCursor(34,116);
-  lcd.print(F("1.0"));
+  lcd.print(F("1.1")); // The latest version number
   lcd.setTextColor(YELLOW);
   lcd.setCursor(170,54);
   lcd.print(F("Press"));
@@ -858,14 +870,25 @@ void menu_cm(void)
                                            
        break;
        case ML_APERT  :
-         max_olines = 1;  // Aperture has 1 OPTION 
+         max_olines = 4;  // Aperture has 4 OPTIONS 
 
          // First OPTION DESCRIPTOR
-         lcd.setCursor(X_MOD-8*DX1,Y_MO);
+         print_colour_option(m_level);
+
+         // Second OPTION DESCRIPTOR
+         lcd.setCursor(X_MOD-10*DX1,Y_MO_1);
+         lcd.print(F("Bgnd Colour"));
+
+         // Third OPTION DESCRIPTOR
+         lcd.setCursor(X_MOD-10*DX1,Y_MO_2);
+         lcd.print(F("Spot Colour"));
+
+        // Fourth OPTION DESCRIPTOR
+         lcd.setCursor(X_MOD-7*DX1,Y_MO_3);
          lcd.print(F("Aperture"));
                                            
         // Update the values
-         menu_value_update(m_level,0,1);
+         menu_value_update(m_level,1,4);
 
        break;
        case ML_DEFAULT :
@@ -1131,7 +1154,19 @@ void menu_cm(void)
        break;
        case ML_APERT :
          switch(m_oline){
-           case 0    : // Aperture_type
+           case 0    : // Colour [foreground,default = black i.e. completely opaque]
+            COLOUR_AP_FG = cycle_colour(COLOUR_AP_FG,updown_dirn);
+            estr=7;
+           break;
+           case 1    : // Colour Background [default  = 'white' i.e. plain transparent]
+            COLOUR_AP_BG = cycle_colour(COLOUR_AP_BG,updown_dirn);
+            estr=7;
+           break;
+           case 2    : // Colour Central Spot [default = black]
+            COLOUR_AP_CS = cycle_colour(COLOUR_AP_CS,updown_dirn);
+            estr=7;
+           break;
+           case 3    : // Aperture_type
             if(updown_dirn){
              if(Aperture_type == AT_PHASECONTRAST)  Aperture_type=AT_BRIGHTFIELD;
               else Aperture_type++;
@@ -2548,23 +2583,23 @@ void update_aperture(void)
   switch(Aperture_type){
     case AT_BRIGHTFIELD :
     case AT_PHASECONTRAST:
-      lcd.fillScreen(BLACK);
+      lcd.fillScreen(COLOUR_AP_BG);
       double_rad = Aperture_radius+Aperture_radius;
-      lcd.fillRoundRect(0+Aperture_radius,0+Aperture_radius,240-double_rad,240-double_rad,120-Aperture_radius, WHITE);
+      lcd.fillRoundRect(0+Aperture_radius,0+Aperture_radius,240-double_rad,240-double_rad,120-Aperture_radius, COLOUR_AP_FG);
       if(Aperture_type == AT_PHASECONTRAST){
         switch(Aperture_rotation){
-          case 0: lcd.fillRect(0,0,120,240, BLACK); break;
-          case 1: lcd.fillRect(120,0,120,240, BLACK); break;
-          case 2: lcd.fillRect(0,0,240,120, BLACK); break;
-          case 3: lcd.fillRect(0,120,240,120, BLACK); break;
+          case 0: lcd.fillRect(0,0,120,240, COLOUR_AP_BG); break;
+          case 1: lcd.fillRect(120,0,120,240, COLOUR_AP_BG); break;
+          case 2: lcd.fillRect(0,0,240,120, COLOUR_AP_BG); break;
+          case 3: lcd.fillRect(0,120,240,120, COLOUR_AP_BG); break;
         }
 
        }
     if(!Aperture_dfsuperposed) break;
     case AT_DARKFIELD:
       double_rad = Aperture_dfradius+Aperture_dfradius;
-      if(!Aperture_dfsuperposed) lcd.fillScreen(WHITE); 
-      lcd.fillRoundRect(0+Aperture_dfradius,0+Aperture_dfradius,240-double_rad,240-double_rad,120-Aperture_dfradius, BLACK);
+      if(!Aperture_dfsuperposed) lcd.fillScreen(COLOUR_AP_FG); 
+      lcd.fillRoundRect(0+Aperture_dfradius,0+Aperture_dfradius,240-double_rad,240-double_rad,120-Aperture_dfradius, COLOUR_AP_CS);
     break;
     default:
     break;
@@ -3133,9 +3168,18 @@ void menu_value_update(uint8_t m_level,uint8_t m_oline_min, uint8_t m_oline_max)
       default:break;
      }   
    break;
-   case ML_APERT  : // max_olines = 1; 
+   case ML_APERT  : // max_olines = 4; 
      switch(m_oline){
       case 0: // First option value
+        update_colour_string(COLOUR_AP_FG,m_oline);
+      break;
+      case 1: // Second option value
+        update_colour_string(COLOUR_AP_BG,m_oline);
+      break;
+      case 2: // Third option value
+        update_colour_string(COLOUR_AP_CS,m_oline);
+      break;
+      case 3: // Fourth option value
          switch(Aperture_type){
           case AT_BRIGHTFIELD      :  
             lcd.setCursor(X_MOV-10*DX1,Y_moline);
