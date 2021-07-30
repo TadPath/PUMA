@@ -7,7 +7,12 @@
 /* Compared to v1.0 is has all the same feature plus the ability to   */
 /* set different colours for the various components of the aperture   */
 /* function of the SLM thereby allowing the easy use of custom        */
-/* Rheinberg filters. Other features are as for v 1.0.                */
+/* Rheinberg filters.                                                 */
+/* You also now have the option of setting a custom colour which can  */
+/* be assigned to anything that takes a colour. The custom colour     */
+/* value is defined via the Defaults menu.                            */
+/* Other features are identical to v 1.0.                             */
+/*                                                 PJT 30.07.2021     */
 /*                                                                    */
 /* ------------------------------------------------------------------ */
 /* Description for v 1.0                                              */
@@ -307,6 +312,7 @@ Arduino_ST7789 lcd = Arduino_ST7789(TFT_DC, TFT_RST);
  uint8_t  Control_mode = CM_Z_MOTOR;
  uint8_t  Previous_cm  = CM_Z_MOTOR;
  uint16_t Colour[10]={WHITE,WHITE,WHITE,WHITE,WHITE,WHITE,WHITE,WHITE,BLACK,BLACK};
+ uint16_t CustomColour = 39321;
  uint8_t  Ptr_X=120,Ptr_Y=120; // Pointer (arrow, etc.) coordinates
  uint8_t  Mkr_X[MKR_MAX],Mkr_Y[MKR_MAX],Mkr_idx=0; // Marker storage arrays 
  uint8_t  Ptr_mode = CO_POINT; // Measurement mode for pointer / marker
@@ -488,6 +494,17 @@ Arduino_ST7789 lcd = Arduino_ST7789(TFT_DC, TFT_RST);
 #define COLOUR_AP_FG      Colour[7]
 #define COLOUR_AP_BG      Colour[8]
 #define COLOUR_AP_CS      Colour[9]
+
+#define C_BLACK   1
+#define C_BLUE    2
+#define C_RED     3
+#define C_GREEN   4
+#define C_CYAN    5
+#define C_MAGENTA 6
+#define C_YELLOW  7
+#define C_WHITE   8
+#define C_CUST    9
+
 
 // If no lamp is connected there will be an abnormally high
 // lamp current reading in the lamp meter ()~1000) so we need
@@ -892,7 +909,7 @@ void menu_cm(void)
 
        break;
        case ML_DEFAULT :
-         max_olines = 6;  // Defaults has 6 OPTIONs 
+         max_olines = 7;  // Defaults has 7 OPTIONs 
 
          // First OPTION DESCRIPTOR
          lcd.setCursor(X_MOD-5*DX1,Y_MO);
@@ -918,8 +935,12 @@ void menu_cm(void)
          lcd.setCursor(X_MOD-10*DX1,Y_MO_5);
          lcd.print(F("Ammeter_Col"));
 
+         // Seventh OPTION DESCRIPTOR
+         lcd.setCursor(X_MOD-10*DX1,Y_MO_6);
+         lcd.print(F("Custom__Col"));
+
         // Update the values
-         menu_value_update(m_level,0,5);
+         menu_value_update(m_level,0,7);
 
        break;
        default: break;
@@ -1214,6 +1235,21 @@ void menu_cm(void)
               beep_signal(BZ_FORBIDDEN);
             } else COLOUR_LAMP = tmpcol;
             estr=7;
+           break;
+           case 6    : // CustomColour
+            change_int(&CustomColour,UINT16,int_delta,1,65534,updown_dirn);
+            switch(CustomColour){ // Ensure it is different from any of the fixed colours
+              case BLUE:
+              case GREEN:
+              case RED:
+              case CYAN:
+              case MAGENTA:
+              case YELLOW:
+               CustomColour++;
+              break;
+              default: break;
+            }
+            estr=12;
            break;
            default: break;
          }
@@ -2774,63 +2810,92 @@ void change_int(void *iptr,uint8_t itype,uint16_t idelta,uint16_t imin,uint32_t 
  
 }
 
+uint16_t colour_idx(uint16_t colour)
+// Generate a fixed integer index to use with the colour switch
+// statement. This is needed because the CustomColour is a variable
+// so cannot be a member of a switch list like the constant fixed
+// colours can. It works because we forbid CustomColour to take
+// any of the fixed colour values (otherwise we could get stuck
+// in a local closed loop situation)
+{
+   switch(colour){
+    case BLACK:   return C_BLACK;
+    case BLUE:    return C_BLUE;
+    case RED:     return C_RED;
+    case GREEN:   return C_GREEN;
+    case CYAN:    return C_CYAN;
+    case MAGENTA: return C_MAGENTA;
+    case YELLOW:  return C_YELLOW;
+    case WHITE:   return C_WHITE;
+    default:      return C_CUST;
+  }
+
+ return C_CUST;
+}
+
 // Cycle the colour value
 uint16_t cycle_colour(uint16_t colour,uint8_t dirn)
 {
  uint16_t return_colour;
- // Colour values are: 0, 31, 63488, 2016, 2047, 63519, 65504, 65535
- if(dirn){ // 'up' from black to white
-  switch(colour){
-    case BLACK:
+ // Colour values are: 0, 31, 63488, 2016, 2047, 63519, 65504, 65535, CustomColour
+ if(dirn){ // 'up' from black to white to CustomColour
+  switch(colour_idx(colour)){
+    case C_BLACK:
      return_colour = BLUE;
     break;
-    case BLUE:
+    case C_BLUE:
      return_colour = RED;
     break;
-    case RED:
+    case C_RED:
      return_colour = GREEN;
     break;
-    case GREEN:
+    case C_GREEN:
      return_colour = CYAN;
     break;
-    case CYAN:
+    case C_CYAN:
      return_colour = MAGENTA;
     break;
-    case MAGENTA:
+    case C_MAGENTA:
      return_colour = YELLOW;
     break;
-    case YELLOW:
+    case C_YELLOW:
      return_colour = WHITE;
     break;
-    case WHITE:
+    case C_WHITE:
+     return_colour = CustomColour;
+    break;
+    case C_CUST:
     default:
      return_colour = BLACK;
     break;
   }
- } else { // 'down' from white to black
-  switch(colour){
-    case BLACK:
+ } else { // 'down' from CustomColour to white to black
+  switch(colour_idx(colour)){
+    case C_BLACK:
+     return_colour = CustomColour;
+    break;
+    case C_CUST:
      return_colour = WHITE;
     break;
-    case BLUE:
+    case C_BLUE:
      return_colour = BLACK;
     break;
-    case RED:
+    case C_RED:
      return_colour = BLUE;
     break;
-    case GREEN:
+    case C_GREEN:
      return_colour = RED;
     break;
-    case CYAN:
+    case C_CYAN:
      return_colour = GREEN;
     break;
-    case MAGENTA:
+    case C_MAGENTA:
      return_colour = CYAN;
     break;
-    case YELLOW:
+    case C_YELLOW:
      return_colour = MAGENTA;
     break;
-    case WHITE:
+    case C_WHITE:
     default:
      return_colour = YELLOW;
     break;
@@ -2838,7 +2903,6 @@ uint16_t cycle_colour(uint16_t colour,uint8_t dirn)
  }
   return return_colour;
 }
-
 // Cycle the Pointer character
 uint8_t cycle_pointer_char(uint8_t pchar,uint8_t dirn)
 {
@@ -3199,7 +3263,7 @@ void menu_value_update(uint8_t m_level,uint8_t m_oline_min, uint8_t m_oline_max)
       default:break;
      }   
    break;
-   case ML_DEFAULT : // max_olines = 6; 
+   case ML_DEFAULT : // max_olines = 7; 
      switch(m_oline){
       case 0: // First option value
          switch(Beeper_mode){
@@ -3247,6 +3311,9 @@ void menu_value_update(uint8_t m_level,uint8_t m_oline_min, uint8_t m_oline_max)
       break;
       case 5: // First option value
         update_colour_string(COLOUR_LAMP,m_oline);
+      break;
+      case 6: // First option value
+        print_int_string(X_MOV,Y_moline,(void *)&CustomColour,UINT16,0,WHITE);
       break;
       default:break;
      }   
@@ -3420,9 +3487,12 @@ void update_colour_string(uint16_t colour, uint16_t m_oline)
     lcd.print(F("Yellow"));
   break;
   case WHITE   :
-  default:
     lcd.setCursor(X_MOV-4*DX1,Y_moline);
     lcd.print(F("White"));
+  break;
+  default:
+    lcd.setCursor(X_MOV-5*DX1,Y_moline);
+    lcd.print(F("Custom"));
   break;
  }
 }
