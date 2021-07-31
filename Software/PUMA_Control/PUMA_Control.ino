@@ -10,9 +10,16 @@
 /* Rheinberg filters.                                                 */
 /* You also now have the option of setting a custom colour which can  */
 /* be assigned to anything that takes a colour. The custom colour     */
-/* value is defined via the Defaults menu.                            */
+/* value is defined via the Defaults menu. Multiple custom colours    */
+/* can be used simultaneously (see Manual for how to do this).        */
+/* In light of the fact that the ammeter readings can be spuriously   */
+/* high and unreliable when batteries are useed, this version gives   */
+/* you the option to diable the ammeter although this option must be  */
+/* used with caution because you will loose the warning of a power    */
+/* regulator failure that could blow the LED light source. See the    */
+/* user's Manual for details.                                         */
 /* Other features are identical to v 1.0.                             */
-/*                                                 PJT 30.07.2021     */
+/*                                                 PJT 31.07.2021     */
 /*                                                                    */
 /* ------------------------------------------------------------------ */
 /* Description for v 1.0                                              */
@@ -591,10 +598,9 @@ void setup()
   lcd.print(F("Press"));
   lcd.setCursor(144,66);
   lcd.print(F("LEFT or RIGHT"));
-  lcd.setCursor(168,78);
-  lcd.print(F("button to"));
-  lcd.setCursor(186,90);
-  lcd.print(F("begin."));
+  lcd.setCursor(166,78);
+  lcd.print(F("button."));
+
  
   // Draw initial navigation buttons
   lcd.fillRect(140,200, 32,16, RED);
@@ -909,7 +915,7 @@ void menu_cm(void)
 
        break;
        case ML_DEFAULT :
-         max_olines = 7;  // Defaults has 7 OPTIONs 
+         max_olines = 8;  // Defaults has 8 OPTIONs 
 
          // First OPTION DESCRIPTOR
          lcd.setCursor(X_MOD-5*DX1,Y_MO);
@@ -939,8 +945,12 @@ void menu_cm(void)
          lcd.setCursor(X_MOD-10*DX1,Y_MO_6);
          lcd.print(F("Custom__Col"));
 
+         // Eighth OPTION DESCRIPTOR
+         lcd.setCursor(X_MOD-10*DX1,Y_MO_7);
+         lcd.print(F("Ammeter_on?"));
+
         // Update the values
-         menu_value_update(m_level,0,7);
+         menu_value_update(m_level,0,8);
 
        break;
        default: break;
@@ -1250,6 +1260,10 @@ void menu_cm(void)
               default: break;
             }
             estr=12;
+           break;
+           case 7    : // Ammeter_on (Boot_complete==2 means No, 1 means Yes)
+            Boot_complete=(Boot_complete==2)?1:2;
+            estr=3;
            break;
            default: break;
          }
@@ -1993,13 +2007,13 @@ void update_timer(void)
  float adc_val;
 
  // Only start checking the lamp once bootup is complete
- if(Boot_complete){
-  
-   lamp_now = (uint16_t)analogRead(LAMP_METER);
-   if(lamp_now<LAMP_DISCONNECTED){
-     Lamp_curr += lamp_now;
-     Lamp_denom ++;
-    }
+ if(Boot_complete==1){
+    
+     lamp_now = (uint16_t)analogRead(LAMP_METER);
+     if(lamp_now<LAMP_DISCONNECTED){
+       Lamp_curr += lamp_now;
+       Lamp_denom ++;
+      }
 
    if(Lamp_denom >= 64){
       Lamp_curr /= Lamp_denom;
@@ -2028,6 +2042,7 @@ void update_timer(void)
        Lamp_denom = 0;
       
      }
+     
      
  } // End of 'if(Boot_complete)' block
  
@@ -2291,6 +2306,7 @@ void toggle_mute(uint8_t status){
   Beeper_mode=BM_OFF;
  } else Beeper_mode=BM_ON;
 }
+
 
 void Z_home(void)
 {
@@ -2811,7 +2827,7 @@ void change_int(void *iptr,uint8_t itype,uint16_t idelta,uint16_t imin,uint32_t 
 }
 
 uint16_t colour_idx(uint16_t colour)
-// Generate a fixed integer index to use with the colour switch
+// Generate a fixed integer index to use with a colour switch
 // statement. This is needed because the CustomColour is a variable
 // so cannot be a member of a switch list like the constant fixed
 // colours can. It works because we forbid CustomColour to take
@@ -3263,7 +3279,7 @@ void menu_value_update(uint8_t m_level,uint8_t m_oline_min, uint8_t m_oline_max)
       default:break;
      }   
    break;
-   case ML_DEFAULT : // max_olines = 7; 
+   case ML_DEFAULT : // max_olines = 8; 
      switch(m_oline){
       case 0: // First option value
          switch(Beeper_mode){
@@ -3309,11 +3325,20 @@ void menu_value_update(uint8_t m_level,uint8_t m_oline_min, uint8_t m_oline_max)
           default: break;
          }
       break;
-      case 5: // First option value
+      case 5: // Sixth option value
         update_colour_string(COLOUR_LAMP,m_oline);
       break;
-      case 6: // First option value
+      case 6: // Seventh option value
         print_int_string(X_MOV,Y_moline,(void *)&CustomColour,UINT16,0,WHITE);
+      break;
+      case 7: // Eighth option value
+         if(Boot_complete==2){  
+            lcd.setCursor(X_MOV-1*DX1,Y_moline);
+            lcd.print(F("No"));
+         } else {
+            lcd.setCursor(X_MOV-2*DX1,Y_moline);
+            lcd.print(F("Yes"));
+         }
       break;
       default:break;
      }   
