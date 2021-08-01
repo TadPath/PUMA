@@ -9,8 +9,9 @@ This project is released under the following licenses:
  
  For documentation: the GNU Free Documentation License, Version 1.3
  
- DOI: ![PUMA DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4664175.svg)
+ GitHub Repository DOI: ![PUMA DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4664175.svg)
 
+ PUMA is published in the Journal of Microscopy, see DOI:[10.1111/jmi.13043](https://doi.org/10.1111/jmi.13043)
                        
 Introduction
 ------------
