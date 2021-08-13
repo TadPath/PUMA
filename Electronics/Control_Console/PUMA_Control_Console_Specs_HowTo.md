@@ -45,7 +45,7 @@ Required Components
 Additional Peripherals Required for Testing
 -------------------------------------------
 * ST7789 240x240 pixel TFT display unit of the kind that will work on 5 volts power and signal supplies (NOT the 3 volt only version - these will not take the 5 volts that the PCC puts out and they will be permanently destroyed if used).
-* 12V stepper motor of the 28BYJ48 type. These may come with a JST PH connector in which case you will need to adapt the connector to fit JST XH cables e.g. by adding JST XH PCB header to the motor JST PH as shown in the picture below.
+* Stepper motor of the 28BYJ48 type. If using a power supply of 9V or lower then the 5V version of this motor is recommended (the 12V version may not give enough torque to turn the gear system in all circumstances if used with a 9V or lower supply). If using a 12V power supply then the 12V version of this motor is advised (using the 5V version with a 12V supply can result in serious and damaging over-heating of the motor with risk of burns and melting the 3D printed plastic gear). The 12V version of the motor may come with a JST PH connector in which case you will need to adapt the connector to fit JST XH cables e.g. by adding JST XH PCB header to the motor JST PH as shown in the picture below.
 ![PUMA Stepper motor](Images/PCC_Stepper_motor.png)
 * Makerbot type endstop limit switch with its cable (customised to fit a 3 pin JST connector as described in the 'How To' document for the PUMA Motherboard. The type of limits switch is as shown below.
 ![PUMA Limit switch](Images/PCC_Limit_switch.png)
