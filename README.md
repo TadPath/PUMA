@@ -2,6 +2,15 @@ PUMA 3D PRINTED MULTIMODALITY MICROSCOPE
 ========================================
 
 ![PUMA Example Scopes](Images/ReadMe_Sm_Scopes.png)
+---
+
+:boom: **New** :arrow_right: **First full version released.** The software and many of the CAD file models are improved comapred to the pre-release version.
+
+:boom: **New** :arrow_right: **PUMA now has a [Dedicated YouTube channel](https://www.youtube.com/channel/UCOvBahuVgEmLB5ycQEsgEnQ)** where you can see video construction guides, usage tutorials and more. Please subscribe to the channel to get notified of new videos. By subscribing you will be supporting the future development of the PUMA project.
+
+:boom: **New** :arrow_right: **PUMA Scopes are commercially available from [OptArc.co.uk](https://www.optarc.co.uk/).** For those who want to use PUMA but are not interested in doing all the DIY construction, we can now supply ready-made PUMA scopes via our online store. Proceeds go towards supporting the development of PUMA. OptArc also provides free user manuals on its [Support pages](https://www.optarc.co.uk/support/).
+
+---
 
 This project is released under the following licenses:
 
@@ -29,7 +38,7 @@ PUMA is an open source 3D printed traditional-style direct vision microscope des
 * It has advanced options not usually found on even expensive lab research scopes such as an augmented reality heads-up display and a computer-controlled spatial light modulator for optical Fourier filtration.
 * It is not restricted to using a camera, computer and screen for observations (although these may all be used, if desired).
 * It is designed to be easily used by those already familiar with standard bench-top microscopes - PUMA does NOT seek to 're-invent' the microscope.
-* It is designed to be fully DIY for those who want to have the greatest cost savings - and only uses widely available standard parts.
+* It is designed to be fully DIY for those who want to have the greatest cost savings - and only uses widely available standard parts. However, for those not interested in DIY, PUMA is also commercially available ready-made from [OptArc.co.uk](https://www.optarc.co.uk/).
 
 Example Images from PUMA
 ------------------------
@@ -51,7 +60,7 @@ DIY: Great care has been taken in the design to ensure the whole scope with all 
 
 RMS STANDARD: The scope accepts RMS standard objectives so you can use very high quality optics such as objectives from the Olympus BH series or old Zeiss / Leitz objectives that can be purchased second hand on eBay or can be found spare in many labs now that most microscopes have gone over to infinity optics. The mechanical tube length of PUMA is 160 mm (or 170 mm with a 3D printed ocular extension adapter that is also part of the PUMA standard). One of the reasons PUMA is so small and lightweight and inexpensive to make is that I designed it to work entirely in this length without any tube extension lenses - so even the complex binocular head adapter (and trinocular) all work in this short mechanical length.
 
-INFINITY OPTICS AND C-MOUNT: PUMA works best with 160 or 170 mm tube length objectives. With the addition of an inexpensive tube lens more modern infinity objectives may also be used including those with a larger thread mount such as the Leica NPlan series - although the image quality will not be so good due to the proprietary nature of the corrections used in such objectives. This infinity option is therefore provided, but not recommended.
+INFINITY OPTICS AND C-MOUNT: PUMA works best with 160 or 170 mm tube length objectives. With the addition of an inexpensive tube lens more modern infinity objectives may also be used including those with a larger thread mount such as the Leica NPlan series - although the image quality will not be so good due to the proprietary nature of the corrections used in such objectives. This infinity option is therefore provided, but not recommended. I am currently working on a more dedicated high quality infinity optics adapter so watch this space for updates.
 
 HIGH EYE POINT OCULARS: Some other 3D printed microscopes were designed to be used with camera, computer and display screen to produce an image - if they use a wide field ocular it is mostly so that they can place a smartphone in front of it rather than it being positioned ergonomically for a human eye. The PUMA is designed as a direct vision scope which will take standard professional quality high eye point eyepieces to allow clear and wide angled field of view even for spectacle wearers. This allows the user to instantly access the widest possible field of view and highest possible resolution in a portable design that is ergonomic for a human observer. For scopes that are dependent on cameras the image size and quality is limited by the size and quality of the available camera chip and computer screen. To get an equivalent large wide angled quality view with a camera scope, you would need a very large monitor (so not portable) and the resolution and colour would never be as good as direct human vision.
 PUMA can be used in monocular (standard and ergonomic variable angle options), binocular and trinocular modes. As a first for 3D printed scopes, PUMA also has a live 'double-header' mode so two people can look down the scope simultaneously for live discussion / teaching - without the need for a camera / monitor system. PUMA was designed for human observers to look down the tubes - this was a primary design objective - not an optional afterthought.
@@ -97,3 +106,5 @@ Of course a 3D printed, plastic-bodied microscope will have limitations compared
 PJT
 
 First Written: 24.02.2021
+
+Last Edit: 14.08.2021
