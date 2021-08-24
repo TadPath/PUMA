@@ -132,7 +132,7 @@ public:
 
   /**********************************************************************/
   /*!
-    @brief   Set text font color with transparant background
+    @brief   Set text font color with transparent background
     @param   c   16-bit 5-6-5 Color to draw text with
     @note    For 'transparent' background, background and foreground
              are set to same color rather than using a separate flag.

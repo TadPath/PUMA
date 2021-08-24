@@ -13,8 +13,8 @@
 /* value is defined via the Defaults menu. Multiple custom colours    */
 /* can be used simultaneously (see Manual for how to do this).        */
 /* In light of the fact that the ammeter readings can be spuriously   */
-/* high and unreliable when batteries are useed, this version gives   */
-/* you the option to diable the ammeter although this option must be  */
+/* high and unreliable when batteries are used, this version gives   */
+/* you the option to disable the ammeter although this option must be  */
 /* used with caution because you will loose the warning of a power    */
 /* regulator failure that could blow the LED light source. See the    */
 /* user's Manual for details.                                         */
@@ -41,7 +41,7 @@
 /*   units.                                                           */
 /* > Provides the ability to display a number of custom grids, scale  */
 /*   bars and graticules in a user-selectable scale and colour.       */
-/* > Provides the ability to display a plain backgound in a number of */
+/* > Provides the ability to display a plain background in a number of */
 /*   colour options to act as illumination for low power projection   */
 /*   of specimens via the AR projector (with the appropriate slide    */
 /*   holder adapter in place).                                        */
@@ -73,7 +73,7 @@
 /* This program uses a modified version of the Adafruit GFX library   */
 /* where the default font has been customised to draw mirror writing  */
 /* and also to draw custom graphics characters. I place this custom   */
-/* version into a copy of that library called GFXM (in the libary     */
+/* version into a copy of that library called GFXM (in the library     */
 /* folder GFXM_Library) so that this does not get overwritten each    */
 /* time the standard Adafruit graphics library is updated). This also */
 /* includes its own version of the standard Arduino library Print.cpp */
@@ -178,7 +178,7 @@ Arduino_ST7789 lcd = Arduino_ST7789(TFT_DC, TFT_RST);
 //     selected control mode). I also do it this way so if, in future, I
 //     add further control modes beyond the current maximum value
 //     (CM_GRATICULE in this case) I can simply change CM_MENU_DELTA to
-//     equal the new maxmimum value and recompile.
+//     equal the new maximum value and recompile.
 
 // Pointer Characters
 #define PC_ARROW_1 0x18 
@@ -240,7 +240,7 @@ Arduino_ST7789 lcd = Arduino_ST7789(TFT_DC, TFT_RST);
 // PSRAM hence the relatively low number: PSRAM used is 2 * MKR_MAX.
 // If I have SRAM to spare once the whole program is complete I should
 // increase this to a maximum of 255 (because the array index global Mkr_idx
-// is of size uint8_t so can only regiser upto 255 points max without also
+// is of size uint8_t so can only register up to 255 points max without also
 // increaeing the size of this index variable.
 
 #define MKR_MAX 127
@@ -478,7 +478,7 @@ Arduino_ST7789 lcd = Arduino_ST7789(TFT_DC, TFT_RST);
 #define YMS 28
 
 // Right aligning text (i.e. left align for viewer due to mirror flip)
-// is achived by the following formula for X-pos:
+// is achieved by the following formula for X-pos:
 // X-pos = X_MOD - (strlen(text-1)*DX1
 // In practice I don't use the strlen function - just count the chars
 // in my fixed string and subtract one.
@@ -1623,7 +1623,7 @@ void pointer_cm(void)
     // This uses the 'print' method because that allows for transparent background
     // so destroys les of whatever the pointer overlies.
 
-    // Bbefore updating the pointer, check if the current position
+    // Before updating the pointer, check if the current position
     // overlies a marker char (and so would have deleted part of it).
     for(idx=0;idx<Mkr_idx;idx++){
       if(Mkr_X[idx]<6) minx=0; else minx=Mkr_X[idx]-6;
@@ -2248,7 +2248,7 @@ void beep(uint16_t delayms){
      analogWrite(BUZZER, 0);
      timer_delay(delayms); // Repeat the delay to avoid continuous sounding if
     break;           // the function is called multiple times to effect
-  }                  // multiple beeps in a row for signalling.
+  }                  // multiple beeps in a row for signaling.
      
 }  
 
@@ -2258,7 +2258,7 @@ void beep_signal(uint8_t sigtype)
   uint8_t idx,n;
   uint16_t duration,elapsed;
 
- // Get selected signal paramters
+ // Get selected signal parameters
  switch(sigtype){
   case BZ_SILENCE      :
   return;
@@ -2394,7 +2394,7 @@ uint32_t Z_move_to(uint32_t zdestination)
 
 // Move the Z-motor nsteps steps in direction dirn
 // return the number of steps moved (if less than
-// nsteps it means a limit was reached priot to completion)
+// nsteps it means a limit was reached prior to completion)
 // Apply backlash correction steps as required but these do not
 // contribute to the total step count.
 uint32_t Z_move(uint32_t nsteps, int8_t dirn)
@@ -2514,7 +2514,7 @@ void update_energised_icon(void)
 // values. The 'modus' argument has the following meanings:
 // modus == 0: Draw all current lines and marks and erase any obsolete ones
 // modus == 1: Erase all lines and marks
-// modus == 2: Erase all lines and any obsolte marks but draw all current marks
+// modus == 2: Erase all lines and any obsolete marks but draw all current marks
 void redraw_marker(uint8_t modus, uint8_t mdx){
     double linelen = 0.0,dx1,dy1,dx3,dy3;
     uint16_t colour;
@@ -3355,10 +3355,10 @@ void menu_value_update(uint8_t m_level,uint8_t m_oline_min, uint8_t m_oline_max)
 // memory allocation of strings. Only positive integers (or 0) of
 // a limited range of types are allowed in this function. 
 // 'prepad' is an integer dictating the number of zeros to prepend to
-// force the printed number to have this minum number of digits. It
+// force the printed number to have this minimum number of digits. It
 // has no effect if the input integer has >= prepad digits already.
 // This facility is useful for printing the fractional part of float
-// numbers e.g. 2 can be printed as 002 which is necesary if you want
+// numbers e.g. 2 can be printed as 002 which is necessary if you want
 // to print this as the decimal part of "5.002"
 // The function returns the number of digits in an integer.
 // No actual printing will be done if y>240

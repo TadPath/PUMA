@@ -101,7 +101,7 @@ inline uint8_t *pgm_read_bitmap_ptr(const GFXfont *gfxFont) {
 
 /**************************************************************************/
 /*!
-   @brief    Instatiate a GFX context for graphics! Can only be done by a
+   @brief    Instantiate a GFX context for graphics! Can only be done by a
    superclass
    @param    w   Display width, in pixels
    @param    h   Display height, in pixels
@@ -121,7 +121,7 @@ Adafruit_GFX::Adafruit_GFX(int16_t w, int16_t h) : WIDTH(w), HEIGHT(h) {
 
 /**************************************************************************/
 /*!
-   @brief    Write a line.  Bresenham's algorithm - thx wikpedia
+   @brief    Write a line.  Bresenham's algorithm - thx wikipedia
     @param    x0  Start point x coordinate
     @param    y0  Start point y coordinate
     @param    x1  End point x coordinate
@@ -1411,7 +1411,7 @@ void Adafruit_GFX::charBounds(unsigned char c, int16_t *x, int16_t *y,
     if (c == '\n') {        // Newline?
       *x = 0;               // Reset x to zero,
       *y += textsize_y * 8; // advance y one line
-      // min/max x/y unchaged -- that waits for next 'normal' character
+      // min/max x/y unchanged -- that waits for next 'normal' character
     } else if (c != '\r') { // Normal char; ignore carriage returns
       if (wrap && ((*x + textsize_x * 6) > _width)) { // Off right?
         *x = 0;                                       // Reset x to zero,
@@ -1556,8 +1556,8 @@ Adafruit_GFX_Button::Adafruit_GFX_Button(void) { _gfx = 0; }
    @param    gfx     Pointer to our display so we can draw to it!
    @param    x       The X coordinate of the center of the button
    @param    y       The Y coordinate of the center of the button
-   @param    w       Width of the buttton
-   @param    h       Height of the buttton
+   @param    w       Width of the button
+   @param    h       Height of the button
    @param    outline  Color of the outline (16-bit 5-6-5 standard)
    @param    fill  Color of the button fill (16-bit 5-6-5 standard)
    @param    textcolor  Color of the button label (16-bit 5-6-5 standard)
@@ -1581,8 +1581,8 @@ void Adafruit_GFX_Button::initButton(Adafruit_GFX *gfx, int16_t x, int16_t y,
    @param    gfx     Pointer to our display so we can draw to it!
    @param    x       The X coordinate of the center of the button
    @param    y       The Y coordinate of the center of the button
-   @param    w       Width of the buttton
-   @param    h       Height of the buttton
+   @param    w       Width of the button
+   @param    h       Height of the button
    @param    outline  Color of the outline (16-bit 5-6-5 standard)
    @param    fill  Color of the button fill (16-bit 5-6-5 standard)
    @param    textcolor  Color of the button label (16-bit 5-6-5 standard)
@@ -1609,8 +1609,8 @@ void Adafruit_GFX_Button::initButton(Adafruit_GFX *gfx, int16_t x, int16_t y,
    @param    gfx     Pointer to our display so we can draw to it!
    @param    x1       The X coordinate of the Upper-Left corner of the button
    @param    y1       The Y coordinate of the Upper-Left corner of the button
-   @param    w       Width of the buttton
-   @param    h       Height of the buttton
+   @param    w       Width of the button
+   @param    h       Height of the button
    @param    outline  Color of the outline (16-bit 5-6-5 standard)
    @param    fill  Color of the button fill (16-bit 5-6-5 standard)
    @param    textcolor  Color of the button label (16-bit 5-6-5 standard)
@@ -1634,8 +1634,8 @@ void Adafruit_GFX_Button::initButtonUL(Adafruit_GFX *gfx, int16_t x1,
    @param    gfx     Pointer to our display so we can draw to it!
    @param    x1       The X coordinate of the Upper-Left corner of the button
    @param    y1       The Y coordinate of the Upper-Left corner of the button
-   @param    w       Width of the buttton
-   @param    h       Height of the buttton
+   @param    w       Width of the button
+   @param    h       Height of the button
    @param    outline  Color of the outline (16-bit 5-6-5 standard)
    @param    fill  Color of the button fill (16-bit 5-6-5 standard)
    @param    textcolor  Color of the button label (16-bit 5-6-5 standard)
@@ -1752,7 +1752,7 @@ const uint8_t PROGMEM GFXcanvas1::GFXclrBit[] = {0x7F, 0xBF, 0xDF, 0xEF,
 
 /**************************************************************************/
 /*!
-   @brief    Instatiate a GFX 1-bit canvas context for graphics
+   @brief    Instantiate a GFX 1-bit canvas context for graphics
    @param    w   Display width, in pixels
    @param    h   Display height, in pixels
 */
@@ -2108,7 +2108,7 @@ void GFXcanvas1::drawFastRawHLine(int16_t x, int16_t y, int16_t w,
 
 /**************************************************************************/
 /*!
-   @brief    Instatiate a GFX 8-bit canvas context for graphics
+   @brief    Instantiate a GFX 8-bit canvas context for graphics
    @param    w   Display width, in pixels
    @param    h   Display height, in pixels
 */
@@ -2376,7 +2376,7 @@ void GFXcanvas8::drawFastRawHLine(int16_t x, int16_t y, int16_t w,
 
 /**************************************************************************/
 /*!
-   @brief    Instatiate a GFX 16-bit canvas context for graphics
+   @brief    Instantiate a GFX 16-bit canvas context for graphics
    @param    w   Display width, in pixels
    @param    h   Display height, in pixels
 */
