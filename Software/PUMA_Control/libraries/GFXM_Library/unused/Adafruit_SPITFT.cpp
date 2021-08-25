@@ -252,7 +252,7 @@ Adafruit_SPITFT::Adafruit_SPITFT(uint16_t w, uint16_t h, int8_t cs, int8_t dc,
 
 #if !defined(ESP8266)
 // ESP8266 compiler freaks out at this constructor -- it can't disambiguate
-// beteween the SPIClass pointer (argument #3) and a regular integer.
+// between the SPIClass pointer (argument #3) and a regular integer.
 // Solution here it to just not offer this variant on the ESP8266. You can
 // use the default hardware SPI peripheral, or you can use software SPI,
 // but if there's any library out there that creates a 'virtual' SPIClass
@@ -1823,9 +1823,9 @@ void Adafruit_SPITFT::invertDisplay(bool i) {
              16-bit color value in '565' RGB format (5 bits red, 6 bits
              green, 5 bits blue). This is just a mathematical operation,
              no hardware is touched.
-    @param   red    8-bit red brightnesss (0 = off, 255 = max).
-    @param   green  8-bit green brightnesss (0 = off, 255 = max).
-    @param   blue   8-bit blue brightnesss (0 = off, 255 = max).
+    @param   red    8-bit red brightness (0 = off, 255 = max).
+    @param   green  8-bit green brightness (0 = off, 255 = max).
+    @param   blue   8-bit blue brightness (0 = off, 255 = max).
     @return  'Packed' 16-bit color value (565 format).
 */
 uint16_t Adafruit_SPITFT::color565(uint8_t red, uint8_t green, uint8_t blue) {

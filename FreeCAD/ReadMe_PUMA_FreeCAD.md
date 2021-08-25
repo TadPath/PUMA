@@ -61,7 +61,7 @@ Summary of Each File
  
 **Trinocular_CP_v1**
 
- The Trinocular / Camera Port tube. This connects to the epi-illumination port of the advanced filterblock to provide an outlet for a third ocular port. This file only contains the tube that conects the parts because the remaining parts are found in other CAD files. For example the 90 degree ocular lens holder is found in the Binocular CAD file. Details of what parts are needed and where to find them are given in the detailed construction documentation.
+ The Trinocular / Camera Port tube. This connects to the epi-illumination port of the advanced filterblock to provide an outlet for a third ocular port. This file only contains the tube that connects the parts because the remaining parts are found in other CAD files. For example the 90 degree ocular lens holder is found in the Binocular CAD file. Details of what parts are needed and where to find them are given in the detailed construction documentation.
   
 **XY_Stabiliser**
 

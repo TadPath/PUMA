@@ -60,7 +60,7 @@ Procedure for the DIY Motherboard
 
 ![PUMA Motherboard Tripad Finishing](Images/MB_TP_Components.png)
 
-* Once the PUMA Control software is loaded onto the Nano you should test it all works with the required peripherals (see the PUMA Control Console specification in the PUMA GitHub repository for specifications as to the required perihperals).
+* Once the PUMA Control software is loaded onto the Nano you should test it all works with the required peripherals (see the PUMA Control Console specification in the PUMA GitHub repository for specifications as to the required peripherals).
 
 Procedure for the PCB Motherboard
 ---------------------------------
