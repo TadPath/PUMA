@@ -2248,7 +2248,7 @@ void beep(uint16_t delayms){
      analogWrite(BUZZER, 0);
      timer_delay(delayms); // Repeat the delay to avoid continuous sounding if
     break;           // the function is called multiple times to effect
-  }                  // multiple beeps in a row for signaling.
+  }                  // multiple beeps in a row for signalling.
      
 }  
 
