@@ -4,7 +4,7 @@ PUMA 3D PRINTED MULTIMODALITY MICROSCOPE
 ![PUMA Example Scopes](Images/ReadMe_Sm_Scopes.png)
 ---
 
-:boom: **New** :arrow_right: **First full version released.** The software and many of the CAD file models are improved comapred to the pre-release version.
+:boom: **New** :arrow_right: **First full version released.** The software and many of the CAD file models are improved compared to the pre-release version.
 
 :boom: **New** :arrow_right: **PUMA now has a [Dedicated YouTube channel](https://www.youtube.com/channel/UCOvBahuVgEmLB5ycQEsgEnQ)** where you can see video construction guides, usage tutorials and more. Please subscribe to the channel to get notified of new videos. By subscribing you will be supporting the future development of the PUMA project.
 
@@ -101,10 +101,10 @@ Of course a 3D printed, plastic-bodied microscope will have limitations compared
 4. Sample size limit. The tripost architecture of the main stage limits the size of specimen that may be examined. There is no problem examining a standard microscope slide (25 x 75 mm) but larger objects such as some larger Petri dishes and cell culture bottles will not fit on the stage.
 5. The PUMA standard for the illumination system employs off-the-shelf mass-produced inexpensive glass moulded aspheric condenser lenses to build a quite complex optical assembly (i.e. Kohler illumination and Abbe condenser). Because these are not custom designed, precision ground and highly corrected - as you would get with much more expensive lab microscopes - the PUMA Kohler setup is more fiddly to align and not as accurate as with expensive research scopes. Nonetheless the PUMA Kohler system is actually very usable and gives a good clean image to high numerical aperture - including for oil immersion.
 6. 3D printing is a slow process - it takes 30 hours of printing just to make the parts for the simplest PUMA scope and >100 hours for some of the more complex configurations. Once printed, many components need to be cleaned up to remove any stray plastic then manually assembled. So although it can be quite cost effective to do this yourself if you already have printing facilities, a significant commitment of your time and skilled labour will be required. 
-7. Although not a limitation of the scope itself, this seems like an appropriate place to emphasise that the optical image quality can only be as good as the quality of the optics used. if you use an Olympus SPlan objective and Olympus WK 10x/20L-H eyepiece (which you can use with PUMA) then you can get the optical image quality of a professional Olympus BH-2 microscope. However, if you use a cheap plastic toy RMS objective costing £5 from AliExpress and a cheap plastic toy eyepiece then you will get the optical viewing experience of a cheap plastic toy microscope.
+7. Although not a limitation of the scope itself, this seems like an appropriate place to emphasise that the optical image quality can only be as good as the quality of the optics used. If you use an Olympus SPlan objective and Olympus WK 10x/20L-H eyepiece (which you can use with PUMA) then you can get the optical image quality of a professional Olympus BH-2 microscope. However, if you use a cheap plastic toy RMS objective costing £5 from AliExpress and a cheap plastic toy eyepiece then you will get the optical viewing experience of a cheap plastic toy microscope.
 
 PJT
 
 First Written: 24.02.2021
 
-Last Edit: 14.08.2021
+Last Edit: 19.08.2021
