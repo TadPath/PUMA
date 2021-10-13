@@ -14,7 +14,7 @@ The LED Pad is made from standard tripad electronics prototyping board that is c
 
 Required Components
 -------------------
-* Tripad electronic prototyping board
+* Tripad electronics prototyping board
 * Aluminium sticky-back foil (or similar, e.g. copper tape)
 * Thermal transfer paste
 * Solder
@@ -22,9 +22,10 @@ Required Components
 * Insulated power cable  50 cm long. Two connecting wires in this cable (one for positive and one for ground). There is no need for it to be coaxial or shielded. Speaker figure of 8 cable can be used (outer dims ~2.2x4.4 mm, inner core 8 strand copper conductor).
 * Phono plug
 * Electrical insulation tape.
-* Suitable source LED. Dimensions diagram shown below. These are 1W LED 8 mm diameter round ceramic body surface mount COB with polycarbonate dome. The round body has flattened sides to 7.26 mm and a 6 mm flat heat conducting base pad. Either daylight/pure white or 460nm blue types are used (for standard illumination and fluorescein fluorescence illumination respectively):
+* Suitable source LED. Dimensions diagram shown below. These are surface mount 1W COB LEDs with 8 mm diameter round ceramic body and polycarbonate dome. The round body has flattened sides to 7.26 mm and a 6 mm flat heat conducting base pad. Either daylight/pure white or 460nm blue types are used (for standard illumination and fluorescein fluorescence illumination respectively):
 	White: Dominant wavelength colour temperature range is 6500-7000K. Voltage range 3.2 to 3.4 V. Brightness rating 100-110 lumens.
 	Blue:   Dominant wavelength range is 460-465 nm. Voltage 3.2-3.6 V. Brightness rating 15-25 lumens.
+Many other colours / wavelengths are also available for difference case uses and fluoreophores
 
 ![PUMA LED Specs](Images/LED_Cob_Specs.png)
 	
@@ -70,5 +71,6 @@ Procedure
 
 PJT
 
-First written: 01.03.2021 
+First written: 01.03.2021
+Last edit: 13.10.2021
 
