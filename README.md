@@ -56,6 +56,16 @@ UPGRADEABLE and MODULAR: Like many professional series of laboratory microscopes
 
 AFFORDABLE and OPEN SOURCE: All aspects of the PUMA are open source and not monopolised behind paywalls and patents. As a 3D-printed project it is designed to be built and customised by anyone with access to 3D printing  and uses standard fixtures and fittings that are available form a variety of retail outlets like Amazon, eBay and AliExpress. Even the high quality optics can be purchased inexpensively form these general outlets - you don't need to buy any component from a specialist university optics supplier or a major microscope manufacturer to get a professional quality optical experience.
 
+Costs to build a PUMA scope  (valid at around June 2021) for three typical configs are given in the table below. Config 1 is a basic monocular scope with mirror for illumination as shown in above figure on the right. Config 2 is for a practical epi-fluorescence scope with LED illumination and an XY mechanical Vernier slide holder. Config 3 is for an advanced trinocular scope with LED Kohler illumination, the AR HUD projector and controller, XY Vernier slide holder and stepper motor focus control similar to the above figure on the left but with the addition of a trinocular port and eyepiece. Costs are in GB Pounds, you can convert to USD or whatever currency is local to you):
+
+| Materials   | Config 1 | Config 2 | Config 3 |
+| ---------   | -------- | -------- | -------- |
+| PLA plastic | £4.12    | £6.26    | £13.88   |
+| Optics      | £25.60   | £46.30   | £97.64   |
+| Electronics/mechanics | £17.45 | £26.80 | £61.37 |
+| **Totals using DIY printing** | **£47.17** | **£79.36** | **£173.18** |
+
+
 DIY: Great care has been taken in the design to ensure the whole scope with all its advanced options can be built by anyone with standard tools and only moderate DIY skills. There is no need to print/etch/drill custom circuit boards and only standard fixings are used - screws and washers that can be purchased cheaply almost anywhere. Even the most advanced optional electronic components can be made with just basic soldering skills and tripad prototyping board. A single Arduino Nano is used as the basis for on-board computing.
 
 RMS STANDARD: The scope accepts RMS standard objectives so you can use very high quality optics such as objectives from the Olympus BH series or old Zeiss / Leitz objectives that can be purchased second hand on eBay or can be found spare in many labs now that most microscopes have gone over to infinity optics. The mechanical tube length of PUMA is 160 mm (or 170 mm with a 3D printed ocular extension adapter that is also part of the PUMA standard). One of the reasons PUMA is so small and lightweight and inexpensive to make is that I designed it to work entirely in this length without any tube extension lenses - so even the complex binocular head adapter (and trinocular) all work in this short mechanical length.
@@ -107,4 +117,4 @@ PJT
 
 First Written: 24.02.2021
 
-Last Edit: 19.08.2021
+Last Edit: 02.01.2022
