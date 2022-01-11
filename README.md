@@ -4,7 +4,7 @@ PUMA 3D PRINTED MULTIMODALITY MICROSCOPE
 ![PUMA Example Scopes](Images/ReadMe_Sm_Scopes.png)
 ---
 ----------------------- ------------------------------------
-> :warning: **NOTE TO ALL MAKERS**: I review and sometimes revise models while I prepare video tutorials on how to make a module. For that reason I advise anyone building PUMA parts to wait until the video tutorial for that part is on YouTube otherwise you may be printing parts that are out of date and not optimum (and may need to reprint components). Also there are specific techniques to building that must be followed for best results and are not obvious from looking at the CAD models. Please be patient and follow the video tutorial advice to avoid disappointment! **The next video scheduled is for the beamsplitter components - updated models may be part of this.**
+> :warning: **NOTE TO ALL MAKERS**: I review and sometimes revise models while I prepare video tutorials on how to make a module. For that reason I advise anyone building PUMA parts to wait until the video tutorial for that part is on YouTube otherwise you may be printing parts that are out of date and not optimum (and may need to reprint components). Also there are specific techniques to building that must be followed for best results and are not obvious from looking at the CAD models. Please be patient and follow the video tutorial advice to avoid disappointment! **The next video scheduled is for the beamsplitter components - updated models will be part of this.**
 ----------------------------------------------------------------
 
 :boom: **New** :arrow_right: **First full version released.** The software and many of the CAD file models are improved compared to the pre-release version.
@@ -120,4 +120,4 @@ PJT
 
 First Written: 24.02.2021
 
-Last Edit: 06.01.2022
+Last Edit: 11.01.2022
