@@ -4,10 +4,10 @@ PUMA 3D PRINTED MULTIMODALITY MICROSCOPE
 ![PUMA Example Scopes](Images/ReadMe_Sm_Scopes.png)
 ---
 ----------------------- ------------------------------------
-> :warning: **NOTE TO ALL MAKERS**: I review and sometimes revise models while I prepare video tutorials on how to make a module. For that reason I advise anyone building PUMA parts to wait until the video tutorial for that part is on YouTube otherwise you may be printing parts that are out of date and not optimum (and may need to reprint components). Also there are specific techniques to building that must be followed for best results and are not obvious from looking at the CAD models. Please be patient and follow the video tutorial advice to avoid disappointment! **I will soon be revising the augmented reality projector modules. The video on the AR Projector is being prepared and any new or updated models will be placed here on GitHub just prior to release of that video.**
+> :warning: **NOTE TO ALL MAKERS**: I review and sometimes revise models while I prepare video tutorials on how to make a module. For that reason I advise anyone building PUMA parts to wait until the video tutorial for that part is on YouTube otherwise you may be printing parts that are out of date and not optimum (and may need to reprint components). Also there are specific techniques to building that must be followed for best results and are not obvious from looking at the CAD models. Please be patient and follow the video tutorial advice to avoid disappointment! **The version 1 full release is already out of date - only use models from the main branch if building a scope.**
 ----------------------------------------------------------------
 
-:boom: **New** :arrow_right: **First full version released.** The software and many of the CAD file models are improved compared to the pre-release version.
+:boom: **New** :arrow_right: **First full version released.** The software and many of the CAD file models are improved compared to the pre-release version. [This first release is now out of date - consider it a historical snapshot - if you are building a scope use the current GitHub models instead]
 
 :boom: **New** :arrow_right: **PUMA now has a [Dedicated YouTube channel](https://www.youtube.com/channel/UCOvBahuVgEmLB5ycQEsgEnQ)** where you can see video construction guides, usage tutorials and more. Please subscribe to the channel to get notified of new videos. By subscribing you will be supporting the future development of the PUMA project.
 
@@ -120,4 +120,4 @@ PJT
 
 First Written: 24.02.2021
 
-Last Edit: 20.01.2022
+Last Edit: 05.05.2022
