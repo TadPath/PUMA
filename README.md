@@ -3,15 +3,16 @@ PUMA 3D PRINTED MULTIMODALITY MICROSCOPE
 
 ![PUMA Example Scopes](Images/ReadMe_Sm_Scopes.png)
 ---
+:boom: **New** :arrow_right: **Quick Start Guide** : By popular demand I have released the first [PUMA Quick Start Guide PDF document](docs/QuickStartGuide.pdf)  which guides you through the process of making your first PUMA microscope. It tells you exactly what models to print and what hardware to get with extra links to example sellers online.
+
+
 ----------------------- ------------------------------------
 > :warning: **NOTE TO ALL MAKERS**: I review and sometimes revise models while I prepare video tutorials on how to make a module. For that reason I advise anyone building PUMA parts to wait until the video tutorial for that part is on YouTube otherwise you may be printing parts that are out of date and not optimum (and may need to reprint components). Also there are specific techniques to building that must be followed for best results and are not obvious from looking at the CAD models. Please be patient and follow the video tutorial advice to avoid disappointment! **The version 1 full release is already out of date - only use models from the main branch if building a scope.**
 ----------------------------------------------------------------
 
-:boom: **New** :arrow_right: **First full version released.** The software and many of the CAD file models are improved compared to the pre-release version. [This first release is now out of date - consider it a historical snapshot - if you are building a scope use the current GitHub models instead]
+* **PUMA has a [Dedicated YouTube channel](https://www.youtube.com/channel/UCOvBahuVgEmLB5ycQEsgEnQ)** where you can see video construction guides, usage tutorials and more. Please subscribe to the channel to get notified of new videos. By subscribing you will be supporting the future development of the PUMA project.
 
-:boom: **New** :arrow_right: **PUMA now has a [Dedicated YouTube channel](https://www.youtube.com/channel/UCOvBahuVgEmLB5ycQEsgEnQ)** where you can see video construction guides, usage tutorials and more. Please subscribe to the channel to get notified of new videos. By subscribing you will be supporting the future development of the PUMA project.
-
-:boom: **New** :arrow_right: **PUMA Scopes are commercially available from [OptArc.co.uk](https://www.optarc.co.uk/).** For those who want to use PUMA but are not interested in doing all the DIY construction, we can now supply ready-made PUMA scopes via our online store. Proceeds go towards supporting the development of PUMA. OptArc also provides free user manuals on its [Support pages](https://www.optarc.co.uk/support/).
+* **PUMA Scopes are commercially available from [OptArc.co.uk](https://www.optarc.co.uk/).** For those who want to use PUMA but are not interested in doing all the DIY construction, we can now supply ready-made PUMA scopes via our online store. Proceeds go towards supporting the development of PUMA. OptArc also provides free user manuals on its [Support pages](https://www.optarc.co.uk/support/).
 
 ---
 
@@ -120,4 +121,4 @@ PJT
 
 First Written: 24.02.2021
 
-Last Edit: 05.05.2022
+Last Edit: 18.05.2022
