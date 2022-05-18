@@ -19,9 +19,11 @@ Since making the video on the Abbe condenser it has come to my attention that th
 
 ![30mm lens variants](Images/30mm_Condenser_lenses.jpg)
 
-The correct type of lens has the tall paraboloid shape,the shorter spherical lens is not suitable (it has the wrong focal lengths). However, of the acceptable paraboloid lenses there are two subtypes: one has a base brim with a curved edge to it and one has a base brim with squared off edges. These two require slightly different model parameters to fit well into the DI_Condenser_23_30 housing.
-For this reason there are now two versions of the DI_Condenser_23_30 model. The lens with the rounded-off brim should be used with the DI_Condenser_23_30 model found in the 'Dominus_v3.1_part2.FCStd' file. The one with the squared-off brim should be used with the modified version in the separate folder 'DI_Condensor_23_30 modifications' (submitted by GitHub user Srinivas-Ganti).
-I am waiting for some of these squared-off lenses to test this alternative model myself so I have not verified the fit as yet. I will  update this in the coming weeks so re-visit this readme for the latest information.
+The correct type of lens has the tall paraboloid shape,the shorter spherical lens is not suitable (it has the wrong focal length). However, of the acceptable paraboloid lenses there are two subtypes: one has a base brim with a curved edge to it and one has a base brim with squared off edges. These two require slightly different model parameters to fit well into the DI_Condenser_23_30 housing.
+I have modified the condenser 23 30 model to have a 'spring-loaded' receptacle hole for the 30 mm lens which now accommodates any of these lenses and which should also compensate for any slight differences in tolerances between printers and between lenses. The new model also has ejection ports which allow the lenses to be removed and resited without damaging the print.
+The previous fixed hole size models have been deleted.
+I have also updated the condenser base so as to have a diaphragm which makes it easier to insert IAD filters without undue force (including the delicate electronic TFT screen-based SLM). The condenser attachments for the mirror suspend socket and upper collector have had their top threads truncated by 0.5 mm to ensure they don't protrude on this new aperture diaphragm and impede the insertion of IAD filters.
+If you have already successfully built a condenser and have no problems inserting IAD filters then there is no need for you to update anything - the optics of the previous and new versions are not significantly different. If you find you are having problems inserting IAD filters then you may want to swap in the new DI_Condenser_base and use the new DI_Cnd_to_UC / DI_Cnd_mirror_holder_socket connectors as it may help with that.
 
 
 Summary of Each File
