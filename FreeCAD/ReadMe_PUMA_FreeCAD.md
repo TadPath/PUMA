@@ -5,7 +5,7 @@ Introduction
 ------------
 These are the source CAD files for the PUMA 3D-Printable Microscope Project. Note that you will need other components in addition to the 3D printed parts represented here to build the modules. For example, screws and lenses. Details are given the the construction documentation and YouTube videos.
 
-These CAD files were made in FreeCAD v. 0.19 using 64 bit Arch Linux.
+These CAD files were made in FreeCAD v. 0.19 using 64 bit Arch Linux. **I also use the Fasteners Workbench add-on for FreeCAD which you may need to properly view some files.** You can install the Fasteners Workbench by following the instructions given here: https://wiki.freecadweb.org/Fasteners_Workbench
 
 For information on how to generate STL files from the models in these CAD files, see the 'PUMA_3D_Printing_Guide' in the 3D_Printing folder on the PUMA GitHub page.
 
