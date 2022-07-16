@@ -42,6 +42,10 @@ Circuit Diagram
 ---------------
 ![PUMA Motherboard Circuit](Images/MB_TP_Circuit.png)
 
+Power Connections
+---------------
+![PUMA Power Circuit](Images/PowerConnections1.jpg)
+
 Procedure for the DIY Motherboard
 ---------------------------------
 * In the following instructions refer to the below diagram for wiring and placement of components. The diagram is a view from the top / component / non-copper surface. The copper tripads are shown in green as if the board were transparent. Wiring and connections are shown either as thick red lines or thin white lines:
