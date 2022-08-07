@@ -13,6 +13,10 @@ If all you need is electronic control of the microscope lamp and nothing else th
 The PCC uses generic parts that are widely available with the exception of the custom PUMA motherboard. However the motherboard can be made as a DIY project (see the [PUMA Motherboard_HowTo_Guide](../Motherboard/PUMA_Motherboard_Specs_HowTo.md)).
 A video tutorial was made which shows how to construct the PCC. This 'How To' guide gives details of the materials tools and components you need but only sparse assembly instruction - see the video for a more comprehensive illustrated construction guide.
 
+Safety Warning
+--------------
+This project uses a high current power regulator and power supply. Making wrong connections or failure of components or misuse can cause fire, burns injuries, batery damamge (explosion, fire or corrosive chemical leakage) and permenent damamge to components and equipment. Only attempt to make this project if you have sufficient electrical enigineering experience or supervision. Read the user manual prior to first use [  [PUMA Control_User_Manual](../../Software/PUMA_Control_Manual.pdf)  ].
+
 Required Components
 -------------------
 * The following 3D printed parts as specified in the [PUMA 3D_Printing_Guide](../../3D_Printing/PUMA_3D_Printing_Guide.pdf):
