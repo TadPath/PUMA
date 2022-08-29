@@ -14,7 +14,7 @@ The PL can power and control any of the PUMA lamps - for white light or fluoresc
 
 :warning: Safety Warning :warning: 
 --------------
-This project uses a high current power regulator and power supply. Making wrong connections or failure of components or misuse can cause fire, burns injuries, batery damamge (explosion, fire or corrosive chemical leakage) and permenent damamge to components and equipment. Only attempt to make this project if you have sufficient electrical enigineering experience or supervision. 
+This project uses a high current power regulator and power supply. Making wrong connections or failure of components or misuse can cause fire, burns injuries, battery damage (explosion, fire or corrosive chemical leakage) and permenent damage to components and equipment. Only attempt to make this project if you have sufficient electrical enigineering experience or supervision. 
 
 Required Components
 -------------------
