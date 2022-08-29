@@ -7,6 +7,8 @@ For source code (including CAD files, STL files and computer programs) and compi
 
 For documentation: the GNU Free Documentation License, Version 1.3
 
+The professionally printed motherboard PCB is now available for purchase from the OptArc store here https://www.optarc.co.uk/products/other-components/
+
 Introduction
 ------------
 The PUMA motherboard is an essential component of the PUMA Control Console (PCC) - the device which lets the user control the Z-motor, lamp brightness and TFT displays of the spatial light modulator (SLM) and heads-up-display (HUD).
