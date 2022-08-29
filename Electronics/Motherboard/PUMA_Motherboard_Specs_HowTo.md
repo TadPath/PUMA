@@ -71,6 +71,7 @@ Procedure for the DIY Motherboard
 Procedure for the PCB Motherboard
 ---------------------------------
 * This is best made by a professional PCB manufacturing service (as shown below).
+* This PCB is commercially avaialable from the OptArc store here https://www.optarc.co.uk/products/other-components/
 * The board edge cuts measure 60.96 mm by 44.45 mm so it is slightly larger than the DIY tripad version but the holes are in identical spacing between the two versions and they are interchangeable in the PUMA Control Console (either will fit).
 * Make or otherwise obtain a drilled double-sided PCB with the specifications contained in the documents in the KiCAD folder of this repository.
 * Solder the components in their places (if not already done for you) and test.
