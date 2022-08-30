@@ -48,6 +48,19 @@ Required Components
 * Electrical insulation tape.
 * Scissors
 
+Optional Dual TFT Y-Cable
+-------------------
+* It is possible to operate two TFT devices at the same time from a single PCC. However the image on each TFT will be identical to each other. This option is provided to allow you to see the aperture function of an SLM on an external screen to monitor it. It is intended that this option only be used with an SLM (i.e. one of the two TFT screens must be without an LED backlight to avoid drawing too much power from the Arduino). Both TFT screens must be of identical type. Both screens must be connected to the PCC prior to power-up. This option requires a custom splitter cable ('Y'-cable) shown in the figure:
+
+![Dual TFT cable](Images/PCC_Y_connector.png)
+* To make this cable:
+1. Cut a 7-pin JST cable in half
+2. Strip the insulation from the terminal wires you just cut (remove about 5 mm of insulation from each wire)
+3. Twist corresponding bare wire ends together and solder them, one-by-one, taking care to match pin-to-pin (see the figure).
+4. Solder each twisted wire to a JST 7 pin male PCB header - taking care that all pins correspond, 1-to-1, 2-to-2, etc.
+5. Test the cable by connecting the PCC to the male header of the Y-cable and the two free ends of the Y cable to the two TFT screen - one of which should be an SLM (i.e. without a backlight).
+6. If it works (a dual image is seen, synchronised on both TFT screens) then consolidate the connections by covering the soldered connections in epoxy resin as shown in the figure. This is important because those wires are very thin and will quickly break with use.
+
 Additional Peripherals Required for Testing
 -------------------------------------------
 * ST7789 240x240 pixel TFT display unit of the kind that will work on 5 volts power and signal supplies (NOT the 3 volt only version - these will not take the 5 volts that the PCC puts out and they will be permanently destroyed if used).
