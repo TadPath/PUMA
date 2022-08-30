@@ -7,11 +7,13 @@ For documentation: the GNU Free Documentation License, Version 1.3
 
 Introduction
 ------------
-The PUMA Control Console (PCC) is the device (pictured bove) which lets the user control the Z-motor, lamp brightness and TFT displays of the spatial light modulator (SLM) and head-up-display (HUD). A detailed illustrated user manual explaining the hardware and software is available here: [PUMA Control_User_Manual](../../Software/PUMA_Control_Manual.pdf)  
-A single PCC can only control one TFT device at a time so can only control the HUD or a SLM at any one time.
+The PUMA Control Console (PCC) is the device (pictured bove) which lets the user control the Z-motor, lamp brightness and TFT displays of the spatial light modulator (SLM) and head-up-display (HUD). A detailed illustrated user manual explaining the hardware and software is available here: [PUMA Control_User_Manual](../../Software/PUMA_Control_Manual.pdf)
+
+A single PCC can only *independently* control one TFT device at a time so can only control the HUD or a SLM at any one time. However, with a specially constructed 'Y' connector cable you *can* drive two TFT's simultaneously but they will show the same image as each other. This may be useful, for example, for you to view the current IAD aperture on the PCC's optional 10 cm monitor at the same time as the SLM TFT is in the microscope.
+
 If all you need is electronic control of the microscope lamp and nothing else then the PCC is overkill. I recommend you use the PUMA Lite console instead which is much easier to build (see the relevant section of the GitHub page for details on the PUMA Lite console).
 The PCC uses generic parts that are widely available with the exception of the custom PUMA motherboard. However the motherboard can be made as a DIY project (see the [PUMA Motherboard_HowTo_Guide](../Motherboard/PUMA_Motherboard_Specs_HowTo.md)).
-A video tutorial was made which shows how to construct the PCC. This 'How To' guide gives details of the materials tools and components you need but only sparse assembly instruction - see the video for a more comprehensive illustrated construction guide.
+A [video tutorial](https://youtu.be/NZe9j9cfFfs) was made which shows how to construct the PCC. This 'How To' guide gives details of the materials tools and components you need but only sparse assembly instruction - see the video for a more comprehensive illustrated construction guide.
 
 :warning: Safety Warning :warning: 
 --------------
