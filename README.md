@@ -7,7 +7,7 @@ PUMA 3D PRINTED MULTIMODALITY MICROSCOPE
 
 
 ----------------------- ------------------------------------
-> :warning: **NOTE TO ALL MAKERS**: I review and sometimes revise models while I prepare video tutorials on how to make a module. For that reason I advise anyone building PUMA parts to wait until the video tutorial for that part is on YouTube otherwise you may be printing parts that are out of date and not optimum (and may need to reprint components). Also there are specific techniques to building that must be followed for best results and are not obvious from looking at the CAD models. Please be patient and follow the video tutorial advice to avoid disappointment! **The version 1 full release is already out of date - only use models from the main branch if building a scope.**
+> :warning: **NOTE TO ALL MAKERS**: **The 2021 (v.1) release is out of date - only use models from the main branch if building a scope.**
 ----------------------------------------------------------------
 
 * **PUMA has a [Dedicated YouTube channel](https://www.youtube.com/channel/UCOvBahuVgEmLB5ycQEsgEnQ)** where you can see video construction guides, usage tutorials and more. Please subscribe to the channel to get notified of new videos. By subscribing you will be supporting the future development of the PUMA project.
@@ -121,4 +121,4 @@ PJT
 
 First Written: 24.02.2021
 
-Last Edit: 18.05.2022
+Last Edit: 04.09.2022
