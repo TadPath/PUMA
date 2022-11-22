@@ -28,7 +28,7 @@ If you have already successfully built a condenser and have no problems insertin
 
 Summary of Each File
 --------------------
-**AF51_Accessories.FCStd**
+**AF51_Accessories**
 Free open source accessories for the OptArc AF51 camera. This includes the eyepiece clamp (so you can customise it to fit your own eyepieces), the narrow eyepiece adapter (for Zeiss and Reichert eyepieces) and the 'NA_Adapter' which is an adapter that allows the camera to be mounted close up to the back focal plane of the objective in the PUMA microscope so you can image the Fourier plane (as an alternative to using a Bertrand phase telescope).
 
 **AR_Projector**
