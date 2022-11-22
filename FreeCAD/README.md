@@ -89,4 +89,4 @@ Free open source accessories for the [OptArc AF51 camera](https://www.optarc.co.
  These are the components required to connect a motor to the microscope stage for motorised focus / Z-motion.
  
 
-PJT 25.02.2021
+PJT 25.02.2021, Last edit 22.11.2022
