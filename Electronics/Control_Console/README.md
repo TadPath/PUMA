@@ -12,7 +12,7 @@ The PUMA Control Console (PCC) is the device (pictured bove) which lets the user
 A single PCC can only *independently* control one TFT device at a time so can only control the HUD or a SLM at any one time. However, with a specially constructed 'Y' connector cable you *can* drive two TFT's simultaneously but they will show the same image as each other. This may be useful, for example, for you to view the current IAD aperture on the PCC's optional 10 cm monitor at the same time as the SLM TFT is in the microscope.
 
 If all you need is electronic control of the microscope lamp and nothing else then the PCC is overkill. I recommend you use the PUMA Lite console instead which is much easier to build (see the relevant section of the GitHub page for details on the PUMA Lite console).
-The PCC uses generic parts that are widely available with the exception of the custom PUMA motherboard. However the motherboard can be made as a DIY project (see the [PUMA Motherboard_HowTo_Guide](../Motherboard/PUMA_Motherboard_Specs_HowTo.md)).
+The PCC uses generic parts that are widely available with the exception of the custom PUMA motherboard. However the motherboard can be made as a DIY project (see the [PUMA Motherboard_HowTo_Guide](../Motherboard/README.md)).
 A [video tutorial](https://youtu.be/NZe9j9cfFfs) was made which shows how to construct the PCC. This 'How To' guide gives details of the materials tools and components you need but only sparse assembly instruction - see the video for a more comprehensive illustrated construction guide.
 
 :warning: Safety Warning :warning: 
@@ -60,6 +60,7 @@ Optional Dual TFT Y-Cable
 4. Solder each twisted wire to a JST 7 pin male PCB header - taking care that all pins correspond, 1-to-1, 2-to-2, etc.
 5. Test the cable by connecting the PCC to the male header of the Y-cable and the two free ends of the Y cable to the two TFT screen - one of which should be an SLM (i.e. without a backlight).
 6. If it works (a dual image is seen, synchronised on both TFT screens) then consolidate the connections by covering the soldered connections in epoxy resin as shown in the figure. This is important because those wires are very thin and will quickly break with use.
+7. Troubleshooting: You may need to switch power off then on again a few times for the sync signal to 'catch' and 'synchronise' between the two TFT modules. Check all connections - disconnect and re-connect.
 
 Additional Peripherals Required for Testing
 -------------------------------------------
@@ -93,7 +94,7 @@ Tools
 
 Assembly Procedure
 ------------------
-* See the video tutorial for detailed illustrations.
+* See the [video tutorial](https://youtu.be/NZe9j9cfFfs) for detailed illustrations.
 * Pre-thread all holes in the casing that are designed to take the thread of a screw. Don't go all the way in and be especially careful of the shallow holes on the front panel otherwise you could deform the external surface or go all the way through with the screw.
 * Attach the components to the front compartment. Attack the JST cable to the joystick board then bend this down 45 degrees. Insert the joystick board into its location ensuring it clips over the 4 pegs in the case. Secure the joystick clamp at its threaded end over the joystick.
 * Cut a double-headed JST 2-pin cable in half and strip the bare ends for a few mm then connect them to the piezo buzzer with solder and cover this with electrical insulation tape. The connection is made such that the red wire of the buzzer goes to pin 2 of the JST connector.
@@ -144,4 +145,4 @@ Tripping the Lamp Power Regulator
 
 PJT
 
-First written: 02.03.2021 
+First written: 02.03.2021, Last edit 22.11.2022 
