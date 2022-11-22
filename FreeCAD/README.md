@@ -5,7 +5,7 @@ Introduction
 ------------
 These are the source CAD files for the PUMA 3D-Printable Microscope Project. Note that you will need other components in addition to the 3D printed parts represented here to build the modules. For example, screws and lenses. Details are given the the construction documentation and YouTube videos.
 
-These CAD files were made in FreeCAD v. 0.19 using 64 bit Arch Linux. **I also use the Fasteners Workbench add-on for FreeCAD which you may need to properly view some files.** You can install the Fasteners Workbench by following the instructions given here: https://wiki.freecadweb.org/Fasteners_Workbench
+These CAD files were made in FreeCAD v. 0.19 and v. 2.0.1 using 64 bit Arch Linux. **I also use the Fasteners Workbench add-on for FreeCAD which you may need to properly view some files.** You can install the Fasteners Workbench by following the instructions given here: https://wiki.freecadweb.org/Fasteners_Workbench
 
 For information on how to generate STL files from the models in these CAD files, see the 'PUMA_3D_Printing_Guide' in the 3D_Printing folder on the PUMA GitHub page.
 
@@ -28,6 +28,8 @@ If you have already successfully built a condenser and have no problems insertin
 
 Summary of Each File
 --------------------
+**AF51_Accessories.FCStd**
+Free open source accessories for the OptArc AF51 camera. This includes the eyepiece clamp (so you can customise it to fit your own eyepieces), the narrow eyepiece adapter (for Zeiss and Reichert eyepieces) and the 'NA_Adapter' which is an adapter that allows the camera to be mounted close up to the back focal plane of the objective in the PUMA microscope so you can image the Fourier plane (as an alternative to using a Bertrand phase telescope).
 
 **AR_Projector**
 
