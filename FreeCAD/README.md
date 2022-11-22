@@ -37,7 +37,7 @@ Free open source accessories for the OptArc AF51 camera. This includes the eyepi
  
 **Binocular**
 
- Parts required for the binocular head module of the microscope. Only parts specific to the binocular attachment are in this file. The binocular head module also uses some parts that are common to the monocular head attachment which are not duplicated here - see the file 'Monocular_v1.1' for those common parts.
+ Parts required for the binocular head module of the microscope. Only parts specific to the binocular attachment are in this file. The binocular head module also uses some parts that are common to the monocular head attachment which are not duplicated here - see the file 'Monocular' for those common parts.
  
 **Dominus**
 
