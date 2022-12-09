@@ -1,0 +1,21 @@
+Need to add 4.28 mm to all radii
+
+To help with this demo I have 
+prepared a list of the parts that
+need modifying and what to change
+them to:
+
+Ocular Cap:
+
+Cap_wall: 17.5 -> 21.78
+
+Sketch_oc_ht_m:
+    Inner length: 14.25 -> 18.53
+
+Cyclinder585: 15.2 -> 19.48
+
+Cap_top_lumen: 11.7 -> 15.98
+
+Cap_thread_bevel:
+    Radius 1: 14.2 -> 18.48
+    Radius 2: 15.2 -> 19.48

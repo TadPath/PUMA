@@ -1,0 +1,45 @@
+Need to add 4.28 mm to all radii
+
+To help with this demo I have 
+prepared a list of the parts that
+need modifying and what to change
+them to:
+
+Ocular Locknut:
+
+Undo chamfer: 0.5 on Edges 22,62
+Undo fillets: 3 on all sharp knurls
+
+Ocular_lock_nut##:
+   Nut_round:
+      Cut359:
+         Cap_wall001: 20 -> 24.28
+         Cap_thread_lumen001:
+            Sweep_oc_ht_m001:
+               Sketch_oc_ht_m001:
+                  14.25 -> 18.53
+            Cylinder599: 15.2 -> 19.48
+
+      Cap_thread_bevel001:
+          Radius 2: 15.2 -> 19.48
+          Radius 1: 14.2 -> 18.48
+
+   Knurl_cut:
+      Knurl001:
+      Knurl002:
+         Cylinders602,604:
+            change y: 27.50 -> 31.78
+         Cylinders603,605:
+            change y: -27.50 -> -31.78
+         Cylinders601,606:
+            change x: -27.50 -> -31.78
+         Cylinders600,607:
+            change x: 27.50 -> 31.78
+
+Re-do fillets: 3 mm on sharp knurls
+Re-do chamfer: 0.5 on Edges 23,63
+
+Flip 180 for printing
+
+
+

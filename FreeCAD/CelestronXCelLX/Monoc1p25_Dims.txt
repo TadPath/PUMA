@@ -1,0 +1,185 @@
+* Need to add 4.28 mm to all radii in the top 5 cm of the tube.
+
+* Need to add 3 mm to tube length to make it 82 mm long.
+
+* Need to elongate the top thread to make it 13 mm long.
+
+* Need to fashion a transition between the modified top 5 cm and the untouched bottom 3 cm
+
+
+To help with this demo I have 
+prepared a list of the parts that
+need modifying and what to change
+them to:
+
+---------
+
+Separate tube from adhesin (delete)
+
+Undo 0.5 mm chamfer on innter top
+
+Separate tube from baffles
+
+Separate Monocular_tube_nobaffles into solid and cuts
+
+Separate Monocular_tube_solid into simple and ThreadBS004
+
+Make a copy of the Cylinder inside Monocular_tube_simple (it will become Cylinder811) and rename to
+
+ Tube_top_solid
+
+Reduce the height of the original Cylinder inside Monocular_tube_simple to 20 mm and change its z position to 14
+
+Create a new Cone: Radius1 -> 19.18
+                   Radius2 -> 14.9
+                   z -> 4
+Rename the cone: Trans_solid
+
+
+Tube_top_solid: Radius -> 19.18
+                Height -> 52
+                z -> -48
+
+Make a copy of Trans_solid and name it Trans_lumen: Radius1 -> 16.08
+             Radius2 -> 11.8
+
+Make a copy of Tube_top_solid and call it Tube_top_lumen: Radius -> 16.08
+
+Now recombine the solid parts with a 'Union' of:
+Tube_top_solid
+Trans_solid
+ThreadBS004
+Monocular_tube_simple
+
+Rename the fusion Monocular_tube_solid
+
+
+---------
+
+
+Separate Monocular_tube_cuts:
+
+Separate Monocular_tube_lumen:
+Note that has a placement of Z = -15 we need to correct for that when we separate the parts
+
+The parts are:
+
+Optical_aperture002 z: 47 -> 32
+
+Chamfer:
+    Cap_top_lumen002: z: -30 -> 12
+                      height -> 20
+
+(Recompute object on Chamfer)
+
+Now recombine
+
+Optical_aperture002
+Chamfer
+Trans_lumen
+Tube_top_lumen
+
+back into Monocular_tube_lumen
+
+---
+
+Now reposition Ocular_snuff_cap002 to fit our 3 mm extended tube:
+ z: -53.50 -1 -> -56.5
+
+Now make invisibile all but
+
+Ocular_thread003:
+
+First shift the whole thing down by 3 mm to fit our extended tube:
+
+Ocular_thread003: z: 15 -> 12
+
+
+We need to elongate the available thread by 5 mm so move the cropping cylinder inside it by 5 mm upwards:
+
+Cylinder680 z: -52 -> -47
+
+
+
+Expand the radii of the thread and snuff cone:
+
+Ocular_thread003:
+   Sweep_oc_ht_f003:
+      Sketch_oc_ht_f003:
+         Constraint10: 15 -> 19.28
+   Cylinder680: 18 -> 22.28
+
+Ocular_snuff_cap002:
+   Cylinder682: 16 -> 20.28
+   Cone019: Radius1: 5 -> 9.28
+            Radius2: 15 -> 19.28
+
+Now make a Union of:
+Ocular_thread003
+Ocular_snuff_cap002
+Monocular_tube_lumen
+Aperculae
+
+
+and rename it Monocular_tube_cuts
+
+
+Make the cut and rename it
+
+ Monocular_tube_nobaffles
+
+
+---------
+
+
+Now open up the Baffles (note z offset of -15) and delete the two closest to the eyepiece:
+Baffle_element_002
+Baffle_element_003
+
+Reform the Baffles and reinstate the -15 z offset.
+
+Fuse (by Union) the Baffles to the tube and rename it:  Monocular_tube#
+
+Re-do the 0.5 mm Chamfer on Monocular_tube# -> Monocular_tube_XCelLX
+
+
+-------
+
+
+Shift the Adhesin down by 3 mm to take account of the new length
+
+
+Increase diameter of adhesin aperture.
+
+Monocular_tube_adhesin:
+   Pads:
+      Cut396:
+         Cylinder683: 14.25 -> 18.53
+
+      Cylinder705: 11.50 -> 15.78
+
+Recompute object
+
+
+Fuse the tube with the adhesin, mesh, export and print.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
