@@ -14,6 +14,9 @@ PUMA 3D PRINTED MULTIMODALITY MICROSCOPE
 
 * **PUMA Scopes are commercially available from [OptArc.co.uk](https://www.optarc.co.uk/).** For those who want to use PUMA but are not interested in doing all the DIY construction, we can now supply ready-made PUMA scopes via our online store. Proceeds go towards supporting the development of PUMA. OptArc also provides free user manuals on its [Support pages](https://www.optarc.co.uk/support/).
 
+* If you like this work and want to support its continuing development ther are now some funding / donation options: 1. [Become a Patreon](https://www.patreon.com/PUMAMicroscope), 2. [Donate to OptArc via PayPal](https://www.paypal.com/donate/?hosted_button_id=NPMYJKJATDLQ4)
+*Thank you*.
+
 ---
 
 This project is released under the following licenses:
@@ -121,4 +124,4 @@ PJT
 
 First Written: 24.02.2021
 
-Last Edit: 16.09.2022
+Last Edit: 28.01.2023
