@@ -7,6 +7,10 @@ Before you begin:
 - Check out the [existing issues](https://github.com/TadPath/PUMA/issues) 
 
 
+## Funding
+No funding or metarial compensation is available for contributors to this site. If you contribute you do so on the understanding and agreement that you are giving of your time and expertise free of charge and without the expectation or entitlement to monetary or other material compensation.
+For the avoidance of doubt, any links to Patreon and PayPal donatation sites are for voluntary contributions to Dr Paul J. Tadrous to assist in his costs for creating and maintaining not only this GitHub project but his other teaching, research and educational activities across other websites including YouTube and OptArc.
+
 ## Language
 
 All documentation and source code comments are to be written using UK / British English and spellings.
