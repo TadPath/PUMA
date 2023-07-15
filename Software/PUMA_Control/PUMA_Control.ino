@@ -4,7 +4,7 @@
 /* =================                                                  */
 /*                                                                    */
 /* V 1.1 is the first full release (after the pre-release).           */
-/* Compared to v1.0 is has all the same feature plus the ability to   */
+/* Compared to v1.0 is has all the same features plus the ability to  */
 /* set different colours for the various components of the aperture   */
 /* function of the SLM thereby allowing the easy use of custom        */
 /* Rheinberg filters.                                                 */
@@ -13,8 +13,8 @@
 /* value is defined via the Defaults menu. Multiple custom colours    */
 /* can be used simultaneously (see Manual for how to do this).        */
 /* In light of the fact that the ammeter readings can be spuriously   */
-/* high and unreliable when batteries are used, this version gives   */
-/* you the option to disable the ammeter although this option must be  */
+/* high and unreliable when batteries are used, this version gives    */
+/* you the option to disable the ammeter although this option must be */
 /* used with caution because you will loose the warning of a power    */
 /* regulator failure that could blow the LED light source. See the    */
 /* user's Manual for details.                                         */
