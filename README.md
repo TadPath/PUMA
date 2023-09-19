@@ -3,11 +3,11 @@ PUMA 3D PRINTED MULTIMODALITY MICROSCOPE
 
 ![PUMA Example Scopes](Images/ReadMe_Sm_Scopes.png)
 ---
-:Boom: **New** :arrow_right: **Quick Start Guide** : By popular demand I have released the first [PUMA Quick Start Guide PDF document](docs/QuickStartGuide.pdf)  which guides you through the process of making your first PUMA microscope. It tells you exactly what models to print and what hardware to get with extra links to example sellers online.
+:boom: **New** :arrow_right: **Quick Start Guide** : By popular demand I have released the first [PUMA Quick Start Guide PDF document](docs/QuickStartGuide.pdf)  which guides you through the process of making your first PUMA microscope. It tells you exactly what models to print and what hardware to get with extra links to example sellers online.
 
 
 ----------------------- ------------------------------------
-> :Warning: **NOTE TO ALL MAKERS**: **The 2021 (v.1.0.0) release is out of date - only use models from the main branch if building a scope.**
+> :warning: **NOTE TO ALL MAKERS**: **The 2021 (v.1.0.0) release is out of date - only use models from the main branch if building a scope.**
 ----------------------------------------------------------------
 
 * **PUMA has a [Dedicated YouTube channel](https://www.youtube.com/channel/UCOvBahuVgEmLB5ycQEsgEnQ)** where you can see video construction guides, usage tutorials and more. Please subscribe to the channel to get notified of new videos. By subscribing you will be supporting the future development of the PUMA project.
