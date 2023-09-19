@@ -3,11 +3,11 @@ PUMA 3D PRINTED MULTIMODALITY MICROSCOPE
 
 ![PUMA Example Scopes](Images/ReadMe_Sm_Scopes.png)
 ---
-:boom: **New** :arrow_right: **Quick Start Guide** : By popular demand I have released the first [PUMA Quick Start Guide PDF document](docs/QuickStartGuide.pdf)  which guides you through the process of making your first PUMA microscope. It tells you exactly what models to print and what hardware to get with extra links to example sellers online.
+:Boom: **New** :arrow_right: **Quick Start Guide** : By popular demand I have released the first [PUMA Quick Start Guide PDF document](docs/QuickStartGuide.pdf)  which guides you through the process of making your first PUMA microscope. It tells you exactly what models to print and what hardware to get with extra links to example sellers online.
 
 
 ----------------------- ------------------------------------
-> :warning: **NOTE TO ALL MAKERS**: **The 2021 (v.1.0.0) release is out of date - only use models from the main branch if building a scope.**
+> :Warning: **NOTE TO ALL MAKERS**: **The 2021 (v.1.0.0) release is out of date - only use models from the main branch if building a scope.**
 ----------------------------------------------------------------
 
 * **PUMA has a [Dedicated YouTube channel](https://www.youtube.com/channel/UCOvBahuVgEmLB5ycQEsgEnQ)** where you can see video construction guides, usage tutorials and more. Please subscribe to the channel to get notified of new videos. By subscribing you will be supporting the future development of the PUMA project.
@@ -30,9 +30,9 @@ This project is released under the following licenses:
                        
 Introduction
 ------------
-PUMA is an Open Source (GPL v3.0) 3D printed light microscope system designed for direct eye observations and ultra-portability with advanced options for digital imaging, measurements and computer control. The name PUMA is an acronym of some of its most important distinguishing features: [P]ortable, [U]pgradeable, [M]odular, [A]ffordable
+PUMA is an Open Source (GPL v3.0) 3D printed light microscope system - backed up by a peer-reviewed paper in the Journal of Microscopy - designed for direct eye observations and ultra-portability with advanced options for digital imaging, measurements and computer control. The name PUMA is an acronym of some of its most important distinguishing features: [P]ortable, [U]pgradeable, [M]odular, [A]ffordable
 
-As a medical Pathologist I use high quality optical microscopes routinely. I know what a great optical image they provide, how comfortable they are to look down and also how horrendously EXPENSIVE they are to buy and maintain putting them beyond reach of most people. I designed the PUMA scope to make such a high quality optical viewing microscopy experience available to people without such generous funding resources.
+As a medical pathologist (now retired from clinical work but still active in research) I use high quality optical microscopes routinely. I know what a great optical image they provide, how comfortable they are to look down and also how horrendously EXPENSIVE they are to buy and maintain putting them beyond reach of most people. I designed the PUMA scope to make such a high quality optical viewing microscopy experience available to people without such generous funding resources and also to teach people about the prinicples of optical microscopy - what better way to re-inforce theoretical learning than to be able to build a high quality microscope from scratch?
 
 Most 3D printed open source microscopes I have seen appear to be either toys or low power inspection scopes and/or they are designed to be used as camera scopes with a web-cam / PiCam or smartphone. Many also seem to be novel re-inventions of the microscope that would seem unfamiliar to people used to operating a traditional laboratory bench top microscope - that doesn't mean they are not useful in their own way of course.
 
@@ -123,4 +123,4 @@ PJT
 
 First Written: 24.02.2021
 
-Last Edit: 28.01.2023
+Last Edit: 19.09.2023
