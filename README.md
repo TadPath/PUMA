@@ -7,7 +7,8 @@ PUMA 3D PRINTED MULTIMODALITY MICROSCOPE
 
 
 ----------------------- ------------------------------------
-> :warning: **NOTE TO ALL MAKERS**: **The 2021 (v.1.0.0) release is out of date - only use models from the main branch if building a scope.** Also, the latest (v1.0 RC ) version of FreeCAD has bugs which make it difficult or impossible to edit the FreeCAD models for PUMA at this time. Please use v0.2 FreeCAD if you experience problems editing the models.
+> :warning: **NOTE TO ALL MAKERS**: **The 2021 (v.1.0.0) release is out of date - only use models from the main branch if building a scope.** Also, the latest (v1.0 RC ) version of FreeCAD has bugs which make it difficult or impossible to edit the FreeCAD models for PUMA at this time. Please use v0.2 FreeCAD if you experience problems editing the models. Issues have been raised with the FreeCAD team here: [Boolean Issue](https://github.com/FreeCAD/FreeCAD/issues/17338) , 
+[Chamfer/Fillet Issue](https://github.com/FreeCAD/FreeCAD/issues/18372)
 ----------------------------------------------------------------
 
 * **PUMA has a [Dedicated YouTube channel](https://www.youtube.com/channel/UCOvBahuVgEmLB5ycQEsgEnQ)** where you can see video construction guides, usage tutorials and more. Please subscribe to the channel to get notified of new videos. By subscribing you will be supporting the future development of the PUMA project.
@@ -123,4 +124,4 @@ PJT
 
 First Written: 24.02.2021
 
-Last Edit: 19.09.2023
+Last Edit: 06.01.2025
