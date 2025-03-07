@@ -3,7 +3,13 @@ PUMA 3D PRINTED MULTIMODALITY MICROSCOPE
 
 ![PUMA Example Scopes](Images/ReadMe_Sm_Scopes.png)
 ---
-:boom: **New** :arrow_right: **Quick Start Guide** : By popular demand I have released the first [PUMA Quick Start Guide PDF document](docs/QuickStartGuide.pdf)  which guides you through the process of making your first PUMA microscope. It tells you exactly what models to print and what hardware to get with extra links to example sellers online.
+<img align="left" width="320" src=Images/CNC_GitHub.png />
+
+# **New** :arrow_right: **CNC Stage** 
+
+I am currently (2025) developing a full XYZ precision CNC stage for the PUMA using a 'standard' CNC system i.e. NEMA bipolar motors, optical limit switches, stand-alone digital stepper drivers (as opposed to 'custom PCBs'), desktop computer control with a 'standard' CNC breakout board (as opposed to being dependent on the RPi), ability to use 'standard' CNC software like Marlin, Klipper, GRBL, Linux CNC, etc. - but also controllable by my own [PARDUS control system](https://github.com/TadPath/PARDUS) and an interface module for MicroManager may be implemented in future.<br/>
+If you want to follow the progress of this then [head over to the latest posts on my Patreon page](https://www.patreon.com/c/PUMAMicroscope).<br/>
+
 
 
 ----------------------- ------------------------------------
@@ -12,6 +18,8 @@ PUMA 3D PRINTED MULTIMODALITY MICROSCOPE
 ----------------------------------------------------------------
 
 * **PUMA has a [Dedicated YouTube channel](https://www.youtube.com/channel/UCOvBahuVgEmLB5ycQEsgEnQ)** where you can see video construction guides, usage tutorials and more. Please subscribe to the channel to get notified of new videos. By subscribing you will be supporting the future development of the PUMA project.
+
+* **Quick Start Guide** : There is also a [PUMA Quick Start Guide PDF document](docs/QuickStartGuide.pdf)  which guides you through the process of making your first PUMA microscope. It tells you exactly what models to print and what hardware to get with extra links to example sellers online.
 
 * **PUMA Scopes are commercially available from [OptArc.co.uk](https://www.optarc.co.uk/).** For those who want to use PUMA but are not interested in doing all the DIY construction, we can now supply ready-made PUMA scopes via our online store. Proceeds go towards supporting the development of PUMA. OptArc also provides free user manuals on its [Support pages](https://www.optarc.co.uk/support/).
 
@@ -92,7 +100,7 @@ SPATIAL LIGHT MODULATOR (SLM): Unlike many commercially available professional s
 
 ![PUMA Examples of SLM Aperture Patterns](Images/ReadMe_Sm_SLM_Aperture_2.png)
 
-MOTORISED FOCUS OPTION: There is an option to use a motor for focussing which gives greater stability and accuracy to the focus mechanism.
+MOTORISED FOCUS OPTION: There is an option to use a motor for focussing which gives greater stability and accuracy to the focus mechanism. A full precision XYZ CNC motorised stage option is currently under development and you can follow the progress of that on my [Patreon page](https://www.patreon.com/PUMAMicroscope)
 
 AUGMENTED REALITY (AR) HEADS-UP DISPLAY (HUD): Another first for 3D printed microscopes (to the best of our knowledge) is the unique PUMA AR projector that allows a digital HUD to be superimposed on the live optical image (see example picture below). This allows many advanced features such as an interactive pointer (useful for teaching and demos), an accurate timer (useful for analysis of live specimen events), the superimposition of many custom grids and graticules (for measurements) and scale bars (for teaching and making scientific publication-ready illustrations). The AR HUD also provides for the interactive measurement of calibrated line and boundary lengths, angles and particle counts amongst other things. All of this is controlled by the portable battery-powered PUMA Control Console using an integrated microprocessor (Arduino Nano) so no mains power source or separate display screen, camera, frame grabber or computer is needed (as would be the case for other microscopes that may provide such digital interactive measurements). A reason why PUMA may be the first 3D printed scope to have an AR HUD option is that other 3D printed microscopes to date have been designed primarily as camera scopes rather than direct vision scopes.
 Specialist HUD AR units have been designed and are commercially available for standard lab microscopes such as Zeiss and Olympus but these cost several thousands of pounds just for the adapter, let alone the scope, putting them out of economic reach of most people and they are certainly not portable.
@@ -124,4 +132,4 @@ PJT
 
 First Written: 24.02.2021
 
-Last Edit: 06.01.2025
+Last Edit: 07.03.2025
