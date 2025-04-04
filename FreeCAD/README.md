@@ -3,14 +3,20 @@ PUMA CAD Files
 
 Introduction
 ------------
-These are the source CAD files for the PUMA 3D-Printable Microscope Project. Note that you will need other components in addition to the 3D printed parts represented here to build the modules. For example, screws and lenses. Details are given the the construction documentation and YouTube videos.
+These are the source CAD files for the PUMA 3D-Printable Microscope Project. **Before opening any of these FreeCAD files into FreeCAD v1.0 or later - whether to edit or just to make printable files like STL or 3mf - please see the 'Issues with FreeCAD v1.0' notes below.** Note that you will need other components in addition to the 3D printed parts represented here to build the modules. For example, screws and lenses. Details are given the the construction documentation and YouTube videos. Also note that I use the Fasteners Workbench add-on for FreeCAD which you may need to properly view some files. You can install the Fasteners Workbench by following the instructions given here: https://wiki.freecadweb.org/Fasteners_Workbench . 
 
-These CAD files were made in FreeCAD v. 0.19 and v. 0.2.0.1 using 64 bit Arch Linux. **I also use the Fasteners Workbench add-on for FreeCAD which you may need to properly view some files.** You can install the Fasteners Workbench by following the instructions given here: https://wiki.freecadweb.org/Fasteners_Workbench . The v1.0 RC of FreeCAD currently (2024) has some bugs which make it impossible to edit all the models without crashing so please continue to use v0.2 if you experience problems till those bugs are ironed out. Issues have been raised with the FreeCAD team here: [Boolean Issue](https://github.com/FreeCAD/FreeCAD/issues/17338) , 
-[Chamfer/Fillet Issue](https://github.com/FreeCAD/FreeCAD/issues/18372)
+Issues with FreeCAD v1.0
+------------------------
+These CAD files were made in FreeCAD v. 0.19 and v. 0.2.0.1 using 64 bit Arch Linux. 
+FreeCAD v1.0 currently (2024-2025) has some bugs which make it impossible to edit all the models without crashing and may corrupt some of the model features if you try to 'recompute' the models in these versions of FreeCAD. Issues have been raised with the FreeCAD team here: [Boolean Issue](https://github.com/FreeCAD/FreeCAD/issues/17338) , [Chamfer/Fillet Issue](https://github.com/FreeCAD/FreeCAD/issues/18372) . So please take the following steps to avoid printing faulty models:
+1. If you want to edit a model, please continue to use v0.2 of FreeCAD till the bugs / incompatibilties with V1.0 are ironed out.
+2. If you just want to create a printable file from a model then, when you load the FreeCAD file, do **NOT** 'recompute' the model as suggested by FreeCAD. Instead just select the model and export it as a .3mf file (I recommend using the .3mf format instead of .STL files). You do this by selecting File -> Export (see the figure).
 
-For information on how to generate STL files from the models in these CAD files, see the 'PUMA_3D_Printing_Guide' in the 3D_Printing folder on the PUMA GitHub page.
+![Exporting as .3mf files](Images/FC1_Workaround.jpg)
 
-Updates to models that have occurred since the v1.0 release are described in the YouTube videos and some are also described in detail below. Many models have been updated since the v1.0 release so please use the models from the current main branch of this GitHub repository when building any part of PUMA.
+Updated Models
+--------------
+Updates to models that have occurred since the v1.0 release of PUMA are described in the YouTube videos and some are also described in detail below. Many models have been updated since the v1.0 release so please use the models from the current main branch of this GitHub repository when building any part of PUMA.
 
 At the end of this document therr is a summary of what each file contains is given below. For details about the parts and construction of the microscope see the detailed documentation and tutorials.
 
