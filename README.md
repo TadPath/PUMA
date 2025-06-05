@@ -3,18 +3,25 @@ PUMA 3D PRINTED MULTIMODALITY MICROSCOPE
 
 ![PUMA Example Scopes](Images/ReadMe_Sm_Scopes.png)
 ---
-<img align="left" width="320" src=Images/CNC_GitHub.png />
 
 # **New** :arrow_right: **CNC Stage** 
 
+<img align="left" width="320" src=Images/CNC_GitHub.png />
+
 I am currently (2025) developing a full XYZ precision CNC stage for the PUMA using a 'standard' CNC system i.e. NEMA bipolar motors, optical limit switches, stand-alone digital stepper drivers (as opposed to 'custom PCBs'), desktop computer control with a 'standard' CNC breakout board (as opposed to being dependent on the RPi), ability to use 'standard' CNC software like Marlin, Klipper, GRBL, Linux CNC, etc. - but also controllable by my own [PARDUS control system](https://github.com/TadPath/PARDUS) and an interface module for MicroManager may be implemented in future.<br/>
 If you want to follow the progress of this then [head over to the latest posts on my Patreon page](https://www.patreon.com/c/PUMAMicroscope).<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 
+----------------------------------------------------------------
 
+## :warning: **NOTE TO ALL MAKERS**
 
------------------------ ------------------------------------
-> :warning: **NOTE TO ALL MAKERS**: **The 2021 (v.1.0.0) release is out of date - only use models from the main branch if building a scope.** Also, the latest (v1.0 RC ) version of FreeCAD has bugs which make it difficult or impossible to edit the FreeCAD models for PUMA at this time. Please use v0.2 FreeCAD if you experience problems editing the models. Issues have been raised with the FreeCAD team here: [Boolean Issue](https://github.com/FreeCAD/FreeCAD/issues/17338) , 
+The 2021 (v.1.0.0) release is out of date - only use models from the main branch if building a scope. Also, the latest (v1.0 RC ) version of FreeCAD has bugs which make it difficult or impossible to edit the FreeCAD models for PUMA at this time. Please use v0.2 FreeCAD if you experience problems editing the models. Issues have been raised with the FreeCAD team here: [Boolean Issue](https://github.com/FreeCAD/FreeCAD/issues/17338) , 
 [Chamfer/Fillet Issue](https://github.com/FreeCAD/FreeCAD/issues/18372) . I have described a workaround for those who just want to get printable files of the models - see the [ReadMe](https://github.com/TadPath/PUMA/tree/main/FreeCAD#readme) in the FreeCAD folder of this repository for details.
+
 ----------------------------------------------------------------
 
 * **PUMA has a [Dedicated YouTube channel](https://www.youtube.com/channel/UCOvBahuVgEmLB5ycQEsgEnQ)** where you can see video construction guides, usage tutorials and more. Please subscribe to the channel to get notified of new videos. By subscribing you will be supporting the future development of the PUMA project.
@@ -132,4 +139,4 @@ PJT
 
 First Written: 24.02.2021
 
-Last Edit: 04.04.2025
+Last Edit: 05.06.2025
