@@ -3,7 +3,7 @@ PUMA CAD Files
 
 Introduction
 ------------
-These are the source CAD files for the PUMA 3D-Printable Microscope Project. **Before opening any of these FreeCAD files into FreeCAD v1.0 or later - whether to edit or just to make printable files like STL or 3mf - please see the 'Issues with FreeCAD v1.0' notes below.** Note that you will need other components in addition to the 3D printed parts represented here to build the modules. For example, screws and lenses. Details are given the the construction documentation and YouTube videos. Also note that I use the Fasteners Workbench add-on for FreeCAD which you may need to properly view some files. You can install the Fasteners Workbench by following the instructions given here: https://wiki.freecadweb.org/Fasteners_Workbench . 
+These are the source CAD files for the PUMA 3D-Printable Microscope Project. The files for the CNC stage and PUMA Aperta were made with version 1.1.3 but the other files were made with older, pre v1.0 FreeCAD and need special treatment as follows. **Before opening any of these FreeCAD files into FreeCAD v1.0 or later - whether to edit or just to make printable files like STL or 3mf - please see the 'Issues with FreeCAD v1.0' notes below.** Note that you will need other components in addition to the 3D printed parts represented here to build the modules. For example, screws and lenses. Details are given the the construction documentation and YouTube videos. Also note that I use the Fasteners Workbench add-on for FreeCAD which you may need to properly view some files. You can install the Fasteners Workbench by following the instructions given here: https://wiki.freecadweb.org/Fasteners_Workbench . 
 
 Issues with FreeCAD v1.0
 ------------------------
