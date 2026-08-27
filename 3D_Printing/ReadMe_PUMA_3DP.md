@@ -9,4 +9,4 @@ The folder 'CE3_Cura' provides Cura (version 4.8.0) profiles that are suitable f
 
 
 
-PJT 25.02.2021
+PJT 25.02.2021, last edit 27.08.2026.
