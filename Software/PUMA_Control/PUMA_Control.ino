@@ -1,5 +1,25 @@
 /* ****************************************************************** */
 /*                                                                    */
+/* PUMA Control v1.2                                                  */
+/* =================                                                  */
+/*                                                                    */
+/* V 1.2 Is an upgraded version that has two functional changes       */
+/* to v.1.1:                                                          */
+/*           1. Added the ability to shift the aperture function in   */
+/*              X and Y so it can be finely centred to the objective  */
+/*              back focal plane.                                     */
+/*           2. The ammeter function is now disabled at boot up by    */
+/*              default (but you can still switch it on at any time   */
+/*              via the 'Defaults' menu.                              */
+/* I have had to make some general alterations to some functions to   */
+/* make them more byte-efficient (generate a smaller size binary) in  */
+/* order to fit in the new aperture shifting code but those changes   */
+/* should not affect functionality.                                   */ 
+/* Other features are identical to v 1.1.                             */
+/*                                                 PJT 15.07.2026     */
+/*                                                                    */
+/* ------------------------------------------------------------------ */
+/*                                                                    */
 /* PUMA Control v1.1                                                  */
 /* =================                                                  */
 /*                                                                    */
@@ -223,6 +243,9 @@ Arduino_ST7789 lcd = Arduino_ST7789(TFT_DC, TFT_RST);
 #define AT_PHASECONTRAST 2  
 #define AT_RASTERSCAN    3  // Set point diameter, scan diameter, delta_t (dwell time for each point, 0 = manual advancement)
 
+// Aperture maximum shift off centre in pixels
+#define AP_MAXSHIFT  20
+
 // Calibration Units
 #define CU_MICROM 0
 #define CU_NANOM  1
@@ -272,15 +295,15 @@ Arduino_ST7789 lcd = Arduino_ST7789(TFT_DC, TFT_RST);
 // Necessary Gloabals
  uint16_t Acklen = 50;     // Key action acknowledgement beep length in ms
  uint8_t  Z_homed = 0;      // Flag to tell if the Z-motor is homed
- uint32_t Z_delta = 16;     // Steps to take on a single activation
+ uint16_t Z_delta = 16;     // Steps to take on a single activation
  uint16_t Z_speed = 16;     // Motor speed setting (minimum delay ms between each step)
  uint32_t Zpos_minimum = 0; // Lower limit relative to home = 0;
  uint32_t Zpos_curr = 0;    // Current Z position realive to home (0)
  uint32_t Zpos_sw_start = 0;// Z-sweep start position
  uint32_t Zsweep_steps = 16;// Z-sweep number of Z_delta steps to sweep
  uint32_t Zsweep_delay = 0; // Z-sweep delay in ms
- uint32_t Zbacklash = 640;  // Z-backlash correction steps
- uint8_t  Zenergised_always = 0; // Whether to leave the coild energised till user disables them (the default is 0 to avoid problems with motor overheating and power wastage)
+ uint16_t Zbacklash = 640;  // Z-backlash correction steps
+ uint8_t  Zenergised_always = 0; // Whether to leave the coils energised till user disables them (the default is 0 to avoid problems with motor overheating and power wastage)
  int8_t   Zchangedir=1;     // Keep track of direction changes
  int8_t   Zlastdir;         //     to apply backlash steps.
  int8_t   Zstep = 0;        // Current motor coil step in sequence
@@ -302,8 +325,9 @@ Arduino_ST7789 lcd = Arduino_ST7789(TFT_DC, TFT_RST);
  uint8_t  Aperture_type = AT_BRIGHTFIELD; // Type of aperture to control
  uint8_t  Aperture_rotation = 0; // Orientation of aperture for phase contrast
  uint8_t  Aperture_dfsuperposed = 0; // Draw aperture with superposed darkfield stop
- uint16_t  Aperture_radius = 0;   // Main aperture radius
- uint16_t  Aperture_dfradius = 0; // Darkdield stop radius
+ uint8_t  Aperture_radius = 0;   // Main aperture radius
+ uint8_t  Aperture_dfradius = 0; // Darkdield stop radius
+ int8_t   ApShiftX = 0,ApShiftY = 0; // Shift params for the aperture function
  uint8_t  Graticule_style = GS_GRID_1; // Style of graticule to draw
  uint8_t  Graticule_orient = 0; // Orientation of graticule to draw
  uint8_t  Graticule_period = 10; // Spacing of graticule parts
@@ -592,7 +616,7 @@ void setup()
   lcd.setCursor(40,104);
   lcd.print(F("v."));
   lcd.setCursor(34,116);
-  lcd.print(F("1.1")); // The latest version number
+  lcd.print(F("1.2")); // The latest version number
   lcd.setTextColor(YELLOW);
   lcd.setCursor(170,54);
   lcd.print(F("Press"));
@@ -615,7 +639,7 @@ void setup()
 
   // Boot up complete - beep twice so the user knows:
   beep_signal(BZ_PROMPT);
-  Boot_complete=1;
+  Boot_complete=2;
   
   // Start a loop looking for either:
   // LEFT_BTN (home Z then go to loop() with Z-motor as default CM) or
@@ -1070,7 +1094,7 @@ void menu_cm(void)
             estr=12;
            break;
            case 2    : // Z_delta
-            change_int(&Z_delta,UINT32,int_delta,1,UINT32_MAX,updown_dirn);
+            change_int(&Z_delta,UINT16,int_delta,1,UINT32_MAX,updown_dirn);
             estr=12;
            break;
            case 3    : // Zpos_minimum
@@ -1090,7 +1114,7 @@ void menu_cm(void)
             estr=12;
            break;
            case 7    : // Zbacklash
-            change_int(&Zbacklash,UINT32,int_delta,0,ZBACKLASH_MAX,updown_dirn);
+            change_int(&Zbacklash,UINT16,int_delta,0,ZBACKLASH_MAX,updown_dirn);
             estr=12;
            break;
            case 8    : // Zenergised_always
@@ -1935,6 +1959,14 @@ void aperture_cm(void)
       lcd.setRotation(Aperture_rotation);
       redraw_aperture=1;
     break;
+    case NAVI_SETLEFT:   
+      ApShiftX = (ApShiftX > AP_MAXSHIFT) ? -AP_MAXSHIFT : (ApShiftX + 1);
+      redraw_aperture = 1;
+    break;
+    case NAVI_SETRIGHT:   
+      ApShiftY = (ApShiftY > AP_MAXSHIFT) ? -AP_MAXSHIFT : (ApShiftY + 1);
+      redraw_aperture = 1;
+    break;
     case NAVI_SETDOWN: // Rotate display in +90 degree intervals
       if(Aperture_rotation==3) Aperture_rotation=0; else Aperture_rotation++;
       lcd.setRotation(Aperture_rotation);
@@ -2627,6 +2659,54 @@ uint8_t Aperture_radius_adjust(long int delta)
 }
 
 
+void update_aperture(void)
+{
+  int16_t calcX, calcY;
+  uint8_t side_len; // 8-bit variable for the width/height (max 240)
+  uint8_t type = Aperture_type; // Cache type to minimize switch jump tables
+
+  if (type == AT_BRIGHTFIELD || type == AT_PHASECONTRAST) {
+    lcd.fillScreen(COLOUR_AP_BG);
+    
+    // Calculate and cache the 8-bit side length for Brightfield
+    side_len = 240 - (Aperture_radius + Aperture_radius);
+   
+    calcX = Aperture_radius + ApShiftX;
+    calcY = Aperture_radius + ApShiftY;
+    if (calcX < 0) calcX = 0;
+    if (calcY < 0) calcY = 0;
+    
+    lcd.fillRoundRect(calcX, calcY, side_len, side_len, 120 - Aperture_radius, COLOUR_AP_FG);
+    
+    if (type == AT_PHASECONTRAST) {
+      calcX = 120 + ApShiftX;
+      calcY = 120 + ApShiftY;
+      switch(Aperture_rotation) {
+        case 0: lcd.fillRect(0, 0, calcX, 240, COLOUR_AP_BG); break;
+        case 1: lcd.fillRect(calcX, 0, 240 - calcX, 240, COLOUR_AP_BG); break;
+        case 2: lcd.fillRect(0, 0, 240, calcY, COLOUR_AP_BG); break;
+        case 3: lcd.fillRect(0, calcY, 240, 240 - calcY, COLOUR_AP_BG); break;
+      }
+    }
+    if (!Aperture_dfsuperposed) return;
+  }
+
+  if (type == AT_DARKFIELD || Aperture_dfsuperposed) {
+    if (!Aperture_dfsuperposed) lcd.fillScreen(COLOUR_AP_FG); 
+    
+    // Recalculate and cache the 8-bit side length for Darkfield
+    side_len = 240 - (Aperture_dfradius + Aperture_dfradius);
+    
+    calcX = Aperture_dfradius + ApShiftX;
+    calcY = Aperture_dfradius + ApShiftY;
+    if (calcX < 0) calcX = 0;
+    if (calcY < 0) calcY = 0;
+    
+    lcd.fillRoundRect(calcX, calcY, side_len, side_len, 120 - Aperture_dfradius, COLOUR_AP_CS);
+  }
+}
+
+/* Original v1.1 function
 // Draws an aperture function
 void update_aperture(void)
 {
@@ -2657,7 +2737,7 @@ void update_aperture(void)
     break;
   }
 }
-
+*/
 
 // Draws a ring around the periphery of the FOV
 void peripheral_ring(uint16_t col)
@@ -2774,7 +2854,41 @@ uint8_t navi_loop(uint8_t srduo)
  return returnval;
 }
 
+void change_int(void *iptr, uint8_t itype, uint16_t idelta, uint16_t imin, uint32_t imax, uint8_t dirn)
+// Increments / decrements an integer value with a non-negative
+// minimum limit
+{
+ // 1. Read the input into a single 32-bit tracking register
+ uint32_t val = (itype == UINT8)  ? *(uint8_t *)iptr : 
+                (itype == UINT16) ? *(uint16_t *)iptr : 
+                                    *(uint32_t *)iptr;
 
+ // 2. Determine type-specific upper limits for overflow detection
+ uint32_t type_max = (itype == UINT8) ? 255UL : 
+                    (itype == UINT16) ? 65535UL : 
+                                        4294967295UL;
+
+ // 3. Run the increment/decrement logic EXACTLY ONCE
+ if (dirn) {
+  // Prevent overflow warp before adding
+  if (val >= (type_max - idelta)) val = imax; 
+  else val += idelta;
+  
+  if (val > imax) val = imax;
+ } else {
+  // Prevent underflow wrap before subtracting
+  if (val <= (uint32_t)(idelta + imin)) val = imin; 
+  else val -= idelta;
+ }
+
+ // 4. Write back the result to the matching pointer assignment
+ if (itype == UINT8)        *(uint8_t *)iptr  = (uint8_t)val;
+ else if (itype == UINT16)  *(uint16_t *)iptr = (uint16_t)val;
+ else                       *(uint32_t *)iptr = val;
+}
+
+
+/* Original function
 // Increments / decrements an integer value with a non-negative
 // minimum limit
 void change_int(void *iptr,uint8_t itype,uint16_t idelta,uint16_t imin,uint32_t imax,uint8_t dirn)
@@ -2825,6 +2939,7 @@ void change_int(void *iptr,uint8_t itype,uint16_t idelta,uint16_t imin,uint32_t 
  }
  
 }
+*/
 
 uint16_t colour_idx(uint16_t colour)
 // Generate a fixed integer index to use with a colour switch
@@ -3121,7 +3236,7 @@ void menu_value_update(uint8_t m_level,uint8_t m_oline_min, uint8_t m_oline_max)
         print_int_string(X_MOV,Y_moline,(void *)&Z_speed,UINT16,0,WHITE);
       break;
       case 2: // Third option value
-        print_int_string(X_MOV,Y_moline,(void *)&Z_delta,UINT32,0,WHITE);
+        print_int_string(X_MOV,Y_moline,(void *)&Z_delta,UINT16,0,WHITE);
       break;
       case 3: // Fourth option value
         print_int_string(X_MOV,Y_moline,(void *)&Zpos_minimum,UINT32,0,WHITE);
@@ -3136,7 +3251,7 @@ void menu_value_update(uint8_t m_level,uint8_t m_oline_min, uint8_t m_oline_max)
         print_int_string(X_MOV,Y_moline,(void *)&Zsweep_delay,UINT32,0,WHITE);
       break;
       case 7: // Eighth option value
-        print_int_string(X_MOV,Y_moline,(void *)&Zbacklash,UINT32,0,WHITE);
+        print_int_string(X_MOV,Y_moline,(void *)&Zbacklash,UINT16,0,WHITE);
       break;
       case 8: // Ninth option value
         print_int_string(X_MOV,Y_moline,(void *)&Zenergised_always,UINT8,0,WHITE);
@@ -3351,6 +3466,66 @@ void menu_value_update(uint8_t m_level,uint8_t m_oline_min, uint8_t m_oline_max)
  }
 
 
+
+uint8_t print_int_string(
+  uint16_t startx,
+  uint16_t y,
+  void *iptr,
+  int8_t itype,
+  uint8_t prepad,
+  uint16_t colour)
+// Print an integer to the screen from right to left without dynamic
+// memory allocation of strings. Only positive integers (or 0) of
+// a limited range of types are allowed in this function. 
+// 'prepad' is an integer dictating the number of zeros to prepend to
+// force the printed number to have this minum number of digits. It
+// has no effect if the input integer has >= prepad digits already.
+// This facility is useful for printing the fractional part of float
+// numbers e.g. 2 can be printed as 002 which is necesary if you want
+// to print this as the decimal part of "5.002"
+// The function returns the number of digits in an integer.
+// No actual printing will be done if y>240
+{
+  if (y > 240) return 0; // Quick exit to save processing cycles
+
+  // 1. Read input to 32-bit register once using compact ternary logic
+  uint32_t ulnum = (itype == UINT8)  ? *(uint8_t *)iptr : 
+                   (itype == UINT16) ? *(uint16_t *)iptr : 
+                                       *(uint32_t *)iptr;
+
+  // 2. Extract digits from right to left into a small stack array
+  uint8_t buf[11]; 
+  uint8_t lenstr = 0;
+  
+  do {
+    buf[lenstr++] = (uint8_t)(ulnum % 10);
+    ulnum /= 10;
+  } while (ulnum > 0);
+
+  // 3. Determine actual layout length including padding
+  uint8_t total_digits = (prepad > lenstr) ? prepad : lenstr;
+
+  // 4. Backtrack the cursor exactly once for the final block width
+  startx -= (DX1 * total_digits);
+
+  // 5. Print leading zeros if padding is required
+  while (prepad > lenstr) {
+    lcd.drawChar(startx, y, '0', colour, BLACK, 1);
+    startx += DX1;
+    prepad--;
+  }
+
+  // 6. Print the actual numbers in correct order
+  while (lenstr > 0) {
+    lcd.drawChar(startx, y, '0' + buf[--lenstr], colour, BLACK, 1);
+    startx += DX1;
+  }
+
+  return total_digits;
+}
+
+
+/* Original function for v1.1
 // Print an integer to the screen from right to left without dynamic
 // memory allocation of strings. Only positive integers (or 0) of
 // a limited range of types are allowed in this function. 
@@ -3433,6 +3608,8 @@ uint8_t print_int_string(
 
  return 0;
 }
+*/
+
 
 // Special case function to convert the calibration factor from
 // separate integer and decimal components into a proper floating
