@@ -8,7 +8,7 @@ PUMA 3D PRINTED MULTIMODALITY MICROSCOPE
 
 <img align="left" width="320" src=Images/CNC_GitHub.png />
 
-I am currently (2026) developing a full XYZ precision CNC stage for the PUMA using a 'standard' CNC system i.e. NEMA bipolar motors, optical limit switches, TMC2209 digital stepper drivers on a modified RAMPS 1.4 board (as opposed to 'custom PCBs'), desktop computer control with a 'standard' CNC breakout board (as opposed to being dependent on the RPi), ability to use 'standard' CNC software like Marlin, Klipper, GRBL, Linux CNC, etc. - but also controllable by my own [PARDUS control system](https://github.com/TadPath/PARDUS) and an interface module for MicroManager may be implemented in future.<br/>
+I am currently (2026) developing a full XYZ precision CNC stage for the PUMA using a 'standard' CNC system i.e. NEMA bipolar motors, optical limit switches, TMC2209 digital stepper drivers on a modified RAMPS 1.4 board (as opposed to 'custom PCBs'), desktop computer control with a 'standard' CNC breakout board (as opposed to being dependent on the RPi), ability to use 'standard' CNC software like Marlin, Klipper, GRBL, Linux CNC, etc. - but also controllable by my own [PARDUS control system](https://codeberg.org/TadPath/PARDUS) and an interface module for MicroManager may be implemented in future.<br/>
 If you want to follow the progress of this then [head over to the latest posts on my Patreon page](https://www.patreon.com/c/PUMAMicroscope).<br/>
 <br/>
 <img width="640" src=Images/True_cost_of_CNC.png />
@@ -139,4 +139,4 @@ PJT
 
 First Written: 24.02.2021
 
-Last Edit: 18.03.2026
+Last Edit: 4.09.2026
