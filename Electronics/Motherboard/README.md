@@ -7,7 +7,7 @@ For source code (including CAD files, STL files and computer programs) and compi
 
 For documentation: the GNU Free Documentation License, Version 1.3
 
-The professionally printed motherboard PCB is now available for purchase from the OptArc store here https://www.optarc.co.uk/products/other-components/
+The professionally printed motherboard PCB is now available for purchase from the OptArc store here [https://www.optarc.co.uk/products/other-components/](https://www.optarc.co.uk/Prod_other)
 
 Introduction
 ------------
